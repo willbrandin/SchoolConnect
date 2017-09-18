@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030964C51F701EC800109AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030964C41F701EC800109AF0 /* AppDelegate.swift */; };
-		030964C71F701EC800109AF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030964C61F701EC800109AF0 /* ViewController.swift */; };
 		030964CA1F701EC800109AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030964C81F701EC800109AF0 /* Main.storyboard */; };
 		030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030964CB1F701EC800109AF0 /* SchoolConnect.xcdatamodeld */; };
 		030964CF1F701EC800109AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030964CE1F701EC800109AF0 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		030964C11F701EC800109AF0 /* SchoolConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		030964C41F701EC800109AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		030964C61F701EC800109AF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		030964C91F701EC800109AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		030964CC1F701EC800109AF0 /* SchoolConnect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SchoolConnect.xcdatamodel; sourceTree = "<group>"; };
 		030964CE1F701EC800109AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +54,10 @@
 		030964C31F701EC800109AF0 /* SchoolConnect */ = {
 			isa = PBXGroup;
 			children = (
-				030964C41F701EC800109AF0 /* AppDelegate.swift */,
-				030964C61F701EC800109AF0 /* ViewController.swift */,
+				030964DC1F701F2A00109AF0 /* Singles */,
+				030964DB1F701EFE00109AF0 /* Controller */,
+				030964DA1F701EF900109AF0 /* View */,
+				030964D91F701EF300109AF0 /* Model */,
 				030964C81F701EC800109AF0 /* Main.storyboard */,
 				030964CE1F701EC800109AF0 /* Assets.xcassets */,
 				030964D01F701EC800109AF0 /* LaunchScreen.storyboard */,
@@ -65,6 +65,35 @@
 				030964CB1F701EC800109AF0 /* SchoolConnect.xcdatamodeld */,
 			);
 			path = SchoolConnect;
+			sourceTree = "<group>";
+		};
+		030964D91F701EF300109AF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		030964DA1F701EF900109AF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		030964DB1F701EFE00109AF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		030964DC1F701F2A00109AF0 /* Singles */ = {
+			isa = PBXGroup;
+			children = (
+				030964C41F701EC800109AF0 /* AppDelegate.swift */,
+			);
+			path = Singles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030964C71F701EC800109AF0 /* ViewController.swift in Sources */,
 				030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */,
 				030964C51F701EC800109AF0 /* AppDelegate.swift in Sources */,
 			);
