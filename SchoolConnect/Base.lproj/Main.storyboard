@@ -136,22 +136,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVA-Z8-ijl" customClass="CalendarView" customModule="SchoolConnect" customModuleProvider="target">
-                                            <rect key="frame" x="21" y="8" width="333" height="67.5"/>
+                                            <rect key="frame" x="21" y="8" width="333" height="78"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-gS-kxh">
-                                                    <rect key="frame" x="8" y="9" width="312" height="50"/>
+                                                    <rect key="frame" x="8" y="9.5" width="312" height="60"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-eY-p3J">
-                                                            <rect key="frame" x="0.0" y="0.0" width="232" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="222" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafeteria Bake Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-de-yLR">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="212.5" height="29"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="212.5" height="39"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="12.31.2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-Dx-ZSt">
-                                                                    <rect key="frame" x="0.0" y="34" width="67.5" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="44" width="67.5" height="16"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -159,10 +159,10 @@
                                                             </subviews>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventSelect" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-9a-V0W">
-                                                            <rect key="frame" x="262" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="252" y="0.0" width="60" height="60"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="UVE-JT-fhi"/>
-                                                                <constraint firstAttribute="height" constant="50" id="VZB-yW-KTO"/>
+                                                                <constraint firstAttribute="width" constant="60" id="UVE-JT-fhi"/>
+                                                                <constraint firstAttribute="height" constant="60" id="VZB-yW-KTO"/>
                                                                 <constraint firstAttribute="width" secondItem="xVL-9a-V0W" secondAttribute="height" multiplier="1:1" id="zMx-kM-hvC"/>
                                                             </constraints>
                                                         </imageView>

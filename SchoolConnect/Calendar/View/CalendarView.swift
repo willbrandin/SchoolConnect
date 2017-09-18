@@ -20,7 +20,7 @@ class CalendarView: UIView {
     func makeShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
-        self.layer.shadowOpacity = 0.1
+        self.layer.shadowOpacity = 0.2
         self.layer.shadowRadius = 8.0
     }
 }

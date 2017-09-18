@@ -17,6 +17,7 @@
 		03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A21F7029C400B8C78E /* NewsArticle.swift */; };
 		03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A41F702AFB00B8C78E /* NewsView.swift */; };
 		03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */; };
+		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,10 @@
 		03A2F5A21F7029C400B8C78E /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		03A2F5A41F702AFB00B8C78E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		03DD738B1F70926500F09808 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
+		03DD738E1F70926500F09808 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		03DD738F1F70929B00F09808 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				030964DC1F701F2A00109AF0 /* Singles */,
+				03DD73881F70926500F09808 /* Calendar */,
 				03A2F59B1F70285100B8C78E /* News */,
 				030964C81F701EC800109AF0 /* Main.storyboard */,
 				030964CE1F701EC800109AF0 /* Assets.xcassets */,
@@ -117,6 +123,41 @@
 				030964D91F701EF300109AF0 /* Model */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		03DD73881F70926500F09808 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				03DD73891F70926500F09808 /* Controller */,
+				03DD738C1F70926500F09808 /* Model */,
+				03DD738D1F70926500F09808 /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		03DD73891F70926500F09808 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */,
+				03DD738B1F70926500F09808 /* CalendarTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		03DD738C1F70926500F09808 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03DD738F1F70929B00F09808 /* CalendarEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03DD738D1F70926500F09808 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03DD738E1F70926500F09808 /* CalendarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +234,7 @@
 			files = (
 				030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */,
 				03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */,
+				03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */,
 				03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */,
 				03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */,
 				03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */,
