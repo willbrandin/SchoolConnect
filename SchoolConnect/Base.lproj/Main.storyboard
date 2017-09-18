@@ -136,31 +136,33 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVA-Z8-ijl" customClass="CalendarView" customModule="SchoolConnect" customModuleProvider="target">
-                                            <rect key="frame" x="21" y="8" width="333" height="92"/>
+                                            <rect key="frame" x="21" y="8" width="333" height="67.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-gS-kxh">
-                                                    <rect key="frame" x="8" y="9" width="312" height="74.5"/>
+                                                    <rect key="frame" x="8" y="9" width="312" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-eY-p3J">
-                                                            <rect key="frame" x="0.0" y="0.0" width="207.5" height="74.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="232" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafeteria Bake Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-de-yLR">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="53.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="212.5" height="29"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="12.31.2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-Dx-ZSt">
-                                                                    <rect key="frame" x="0.0" y="58.5" width="67.5" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="34" width="67.5" height="16"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-9a-V0W">
-                                                            <rect key="frame" x="237.5" y="0.0" width="74.5" height="74.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventSelect" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-9a-V0W">
+                                                            <rect key="frame" x="262" y="0.0" width="50" height="50"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="UVE-JT-fhi"/>
+                                                                <constraint firstAttribute="height" constant="50" id="VZB-yW-KTO"/>
                                                                 <constraint firstAttribute="width" secondItem="xVL-9a-V0W" secondAttribute="height" multiplier="1:1" id="zMx-kM-hvC"/>
                                                             </constraints>
                                                         </imageView>
@@ -258,27 +260,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aJW-Hc-7TA">
-                            <size key="itemSize" width="375" height="451"/>
+                            <size key="itemSize" width="375" height="458"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsArticleCell" id="8S3-DX-dZ6" customClass="NewsCollectionViewCell" customModule="SchoolConnect" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="458"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-pP-Z3K" customClass="NewsView" customModule="SchoolConnect" customModuleProvider="target">
-                                            <rect key="frame" x="21" y="14" width="333" height="385"/>
+                                            <rect key="frame" x="21" y="14" width="333" height="408"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="Zr3-Qd-o7Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="252"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="275"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-7N-wL9">
-                                                    <rect key="frame" x="16" y="269" width="265" height="94.5"/>
+                                                    <rect key="frame" x="16" y="292" width="265" height="94.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/25/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-VJ-mP5">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="14.5"/>
@@ -326,7 +328,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Hpj-pP-Z3K" secondAttribute="bottom" constant="36" id="6Sr-XQ-f5N"/>
                                     <constraint firstItem="Hpj-pP-Z3K" firstAttribute="leading" secondItem="8S3-DX-dZ6" secondAttribute="leading" constant="21" id="Pvr-1c-Eic"/>
                                 </constraints>
-                                <size key="customSize" width="375" height="435"/>
+                                <size key="customSize" width="375" height="458"/>
                                 <connections>
                                     <outlet property="newsArticlePhoto" destination="Zr3-Qd-o7Y" id="ZZc-Zk-fuJ"/>
                                     <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
@@ -367,6 +369,7 @@
         <image name="calendar" width="20" height="20"/>
         <image name="diamond_round" width="22" height="22"/>
         <image name="email" width="20" height="15"/>
+        <image name="eventSelect" width="100" height="100"/>
         <image name="ls-default news" width="312" height="215"/>
         <image name="news_grid" width="20" height="20"/>
     </resources>
