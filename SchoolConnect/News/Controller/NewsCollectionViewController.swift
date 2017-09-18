@@ -29,6 +29,7 @@ class NewsCollectionViewController: UICollectionViewController {
         newsArray.append(story1)
         newsArray.append(story2)
         newsArray.append(story3)
+        self.collectionView?.reloadData()
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

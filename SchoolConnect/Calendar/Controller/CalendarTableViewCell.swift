@@ -10,7 +10,8 @@ import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
     
-    @UITableViewCell
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var date: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +19,8 @@ class CalendarTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ event: CalendarEvent) {
-        
+        self.title.text = event.title
+        self.date.text = event.date
     }
     
 

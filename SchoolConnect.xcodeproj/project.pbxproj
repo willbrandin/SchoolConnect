@@ -12,6 +12,9 @@
 		030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030964CB1F701EC800109AF0 /* SchoolConnect.xcdatamodeld */; };
 		030964CF1F701EC800109AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030964CE1F701EC800109AF0 /* Assets.xcassets */; };
 		030964D21F701EC800109AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030964D01F701EC800109AF0 /* LaunchScreen.storyboard */; };
+		037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */; };
+		037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738B1F70926500F09808 /* CalendarTableViewController.swift */; };
+		037BD8D31F7094AC00B4E8DD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738E1F70926500F09808 /* CalendarView.swift */; };
 		03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */; };
 		03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */; };
 		03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A21F7029C400B8C78E /* NewsArticle.swift */; };
@@ -233,13 +236,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */,
+				037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */,
 				03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */,
 				03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */,
 				03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */,
 				03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */,
+				037BD8D31F7094AC00B4E8DD /* CalendarView.swift in Sources */,
 				03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */,
 				03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */,
 				030964C51F701EC800109AF0 /* AppDelegate.swift in Sources */,
+				037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

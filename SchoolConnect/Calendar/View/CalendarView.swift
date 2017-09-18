@@ -9,10 +9,12 @@
 import UIKit
 
 class CalendarView: UIView {
+    
     override func layoutSubviews() {
        updateCornerRadius()
         makeShadow()
     }
+
     func updateCornerRadius() {
         self.layer.cornerRadius = 15.0
         self.layer.masksToBounds = false
