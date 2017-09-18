@@ -199,7 +199,7 @@
         <!--News-->
         <scene sceneID="1eb-CY-zdk">
             <objects>
-                <collectionViewController id="mTy-6e-UUd" sceneMemberID="viewController">
+                <collectionViewController id="mTy-6e-UUd" customClass="NewsCollectionViewController" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yL1-tq-Ysb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8S3-DX-dZ6">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8S3-DX-dZ6" customClass="NewsCollectionViewCell" customModule="SchoolConnect" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -275,6 +275,10 @@
                                 </constraints>
                                 <size key="customSize" width="375" height="451"/>
                                 <connections>
+                                    <outlet property="newsArticlePhoto" destination="Zr3-Qd-o7Y" id="ZZc-Zk-fuJ"/>
+                                    <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
+                                    <outlet property="subtitleLabel" destination="Zc5-XT-Uyf" id="dzC-0Y-RP9"/>
+                                    <outlet property="titleLabel" destination="zHV-uo-CBo" id="8uk-9k-o8E"/>
                                     <segue destination="YhM-qH-ApF" kind="show" id="1o4-YZ-kxN"/>
                                 </connections>
                             </collectionViewCell>
