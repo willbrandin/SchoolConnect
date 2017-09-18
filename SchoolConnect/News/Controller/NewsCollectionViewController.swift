@@ -11,13 +11,29 @@ import UIKit
 private let reuseIdentifier = "NewsArticleCell"
 
 class NewsCollectionViewController: UICollectionViewController {
+    
+    var newsArray = [NewsArticle]()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
+        
+        downloadNewsData()
+
+    }
+    
+    func downloadNewsData() {
+        //GET DATA?
+        let story1 = NewsArticle(title: "Life School wins", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
+        let story2 = NewsArticle(title: "Oak Cliff wins award", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
+        let story3 = NewsArticle(title: "New High School", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
+        newsArray.append(story1)
+        newsArray.append(story2)
+        newsArray.append(story3)
     }
 
 
@@ -25,17 +41,18 @@ class NewsCollectionViewController: UICollectionViewController {
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return newsArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? NewsCollectionViewCell {
+            cell.configureCell(news: newsArray[indexPath.row])
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+
     }
 
    

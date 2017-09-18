@@ -14,7 +14,7 @@ class NewsView: UIView {
         updateCornerRadius()
     }
     func updateCornerRadius() {
-        self.layer.cornerRadius = 15
+        self.layer.cornerRadius = 15.0
         self.layer.masksToBounds = true
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewsArticle {
+class NewsArticle {
     
     var title: String!
     var subtitle: String!
@@ -16,5 +16,13 @@ struct NewsArticle {
     var pubDate: String!
     var imgUrl: String!
     
-    
+    init(title: String, subtitle: String, pubDate: String) {
+        self.title = title
+        self.subtitle = subtitle
+        self.pubDate = pubDate
+    }
 }
+
+
+
+

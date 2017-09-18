@@ -211,21 +211,21 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8S3-DX-dZ6" customClass="NewsCollectionViewCell" customModule="SchoolConnect" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsArticleCell" id="8S3-DX-dZ6" customClass="NewsCollectionViewCell" customModule="SchoolConnect" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-pP-Z3K">
-                                            <rect key="frame" x="21" y="14" width="333" height="391"/>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-pP-Z3K" customClass="NewsView" customModule="SchoolConnect" customModuleProvider="target">
+                                            <rect key="frame" x="21" y="14" width="333" height="385"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="Zr3-Qd-o7Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="258"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="252"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-7N-wL9">
-                                                    <rect key="frame" x="16" y="275" width="265" height="94.5"/>
+                                                    <rect key="frame" x="16" y="269" width="265" height="94.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/25/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-VJ-mP5">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="14.5"/>
@@ -270,10 +270,10 @@
                                 <constraints>
                                     <constraint firstItem="Hpj-pP-Z3K" firstAttribute="top" secondItem="8S3-DX-dZ6" secondAttribute="top" constant="14" id="29n-Za-gJz"/>
                                     <constraint firstAttribute="trailing" secondItem="Hpj-pP-Z3K" secondAttribute="trailing" constant="21" id="31l-oh-3eu"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hpj-pP-Z3K" secondAttribute="bottom" constant="46" id="6Sr-XQ-f5N"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hpj-pP-Z3K" secondAttribute="bottom" constant="36" id="6Sr-XQ-f5N"/>
                                     <constraint firstItem="Hpj-pP-Z3K" firstAttribute="leading" secondItem="8S3-DX-dZ6" secondAttribute="leading" constant="21" id="Pvr-1c-Eic"/>
                                 </constraints>
-                                <size key="customSize" width="375" height="451"/>
+                                <size key="customSize" width="375" height="435"/>
                                 <connections>
                                     <outlet property="newsArticlePhoto" destination="Zr3-Qd-o7Y" id="ZZc-Zk-fuJ"/>
                                     <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
