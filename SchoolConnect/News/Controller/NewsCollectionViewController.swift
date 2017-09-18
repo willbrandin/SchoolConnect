@@ -18,12 +18,7 @@ class NewsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        // Do any additional setup after loading the view.
-        
         downloadNewsData()
-
     }
     
     func downloadNewsData() {
@@ -35,7 +30,6 @@ class NewsCollectionViewController: UICollectionViewController {
         newsArray.append(story2)
         newsArray.append(story3)
     }
-
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -52,7 +46,6 @@ class NewsCollectionViewController: UICollectionViewController {
         } else {
             return UICollectionViewCell()
         }
-
     }
 
    

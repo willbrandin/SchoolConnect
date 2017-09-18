@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,12 +14,12 @@
         <scene sceneID="OEN-iV-wfC">
             <objects>
                 <navigationController id="HKe-3I-F6e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="qFk-JW-IJp"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="diamond_round" id="qFk-JW-IJp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="74f-zn-PW5">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.090196078431372548" green="0.13725490196078433" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="1Wg-Pq-hdX" kind="relationship" relationship="rootViewController" id="g0I-Cq-aAR"/>
@@ -82,7 +83,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3cb-Tb-2Qh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.090196078431372548" green="0.13725490196078433" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="HKe-3I-F6e" kind="relationship" relationship="viewControllers" id="HXv-SX-NtF"/>
@@ -99,12 +103,12 @@
         <scene sceneID="xoI-vf-Q8D">
             <objects>
                 <navigationController id="aJ2-Sv-7JR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" id="GAs-4f-rUf"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="GAs-4f-rUf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="16s-kX-W2l">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.090196078431372548" green="0.13725490196078433" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="X9h-cH-Dz8" kind="relationship" relationship="rootViewController" id="9zG-lg-Zqy"/>
@@ -117,18 +121,67 @@
         <!--Calendar Events-->
         <scene sceneID="7Gn-al-wBU">
             <objects>
-                <tableViewController id="X9h-cH-Dz8" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6tG-kw-eZL">
+                <tableViewController id="X9h-cH-Dz8" customClass="CalendarTableViewController" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6tG-kw-eZL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bfs-wm-P8O">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarCell" rowHeight="120" id="Bfs-wm-P8O" customClass="CalendarTableViewCell" customModule="SchoolConnect" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bfs-wm-P8O" id="hLO-91-pbc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVA-Z8-ijl" customClass="CalendarView" customModule="SchoolConnect" customModuleProvider="target">
+                                            <rect key="frame" x="21" y="8" width="333" height="92"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-gS-kxh">
+                                                    <rect key="frame" x="8" y="9" width="312" height="74.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-eY-p3J">
+                                                            <rect key="frame" x="0.0" y="0.0" width="207.5" height="74.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafeteria Bake Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-de-yLR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="53.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="12.31.2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-Dx-ZSt">
+                                                                    <rect key="frame" x="0.0" y="58.5" width="67.5" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-9a-V0W">
+                                                            <rect key="frame" x="237.5" y="0.0" width="74.5" height="74.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="xVL-9a-V0W" secondAttribute="height" multiplier="1:1" id="zMx-kM-hvC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Gel-gS-kxh" firstAttribute="top" secondItem="MVA-Z8-ijl" secondAttribute="top" constant="9" id="E0G-xr-ZgS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gel-gS-kxh" secondAttribute="trailing" constant="13" id="ZAz-Wc-Hmi"/>
+                                                <constraint firstItem="Gel-gS-kxh" firstAttribute="leading" secondItem="MVA-Z8-ijl" secondAttribute="leading" constant="8" id="r5S-gr-vIc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gel-gS-kxh" secondAttribute="bottom" constant="9" id="zQg-FZ-N0m"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="MVA-Z8-ijl" secondAttribute="bottom" constant="20" id="A9x-4Q-swo"/>
+                                        <constraint firstItem="MVA-Z8-ijl" firstAttribute="top" secondItem="hLO-91-pbc" secondAttribute="top" constant="8" id="NM8-N5-Vvo"/>
+                                        <constraint firstItem="MVA-Z8-ijl" firstAttribute="leading" secondItem="hLO-91-pbc" secondAttribute="leading" constant="21" id="SOr-NE-AkA"/>
+                                        <constraint firstAttribute="trailing" secondItem="MVA-Z8-ijl" secondAttribute="trailing" constant="21" id="r2h-hU-ZjP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="u7y-ts-yWa" kind="show" id="emn-Br-YIP"/>
@@ -144,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIJ-0Z-zz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="1086"/>
+            <point key="canvasLocation" x="1440.8" y="1085.3073463268368"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Lz-lh-eej">
@@ -171,7 +224,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="b9j-Zc-AZP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact" id="C9U-hP-wiv"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="email" id="C9U-hP-wiv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHO-1g-1w5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,7 +234,7 @@
         <scene sceneID="fhC-SF-Ngo">
             <objects>
                 <navigationController id="Xmo-cM-yW9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="f3q-fA-Hmp"/>
+                    <tabBarItem key="tabBarItem" title="News" image="news_grid" id="f3q-fA-Hmp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qdT-dm-qPJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -311,6 +364,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="20" height="20"/>
+        <image name="diamond_round" width="22" height="22"/>
+        <image name="email" width="20" height="15"/>
         <image name="ls-default news" width="312" height="215"/>
+        <image name="news_grid" width="20" height="20"/>
     </resources>
 </document>
