@@ -10,14 +10,16 @@ import UIKit
 
 class CalendarEventViewController: UIViewController {
 
-    //var calendarEvent: CalendarEvent!
+    var calendarEvent: CalendarEvent!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
-
+    func setupView() {
+        self.title = calendarEvent.title
+    }
     
 
 }

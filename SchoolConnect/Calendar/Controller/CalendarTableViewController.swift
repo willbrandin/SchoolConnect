@@ -50,9 +50,19 @@ class CalendarTableViewController: UITableViewController {
     }
     //Sends TblVw Cell Data and sends it to the ViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "CalendarEventSegue", sender: nil)
+        var selectedEvent: CalendarEvent!
+        selectedEvent = eventsArray[indexPath.row]
+        self.performSegue(withIdentifier: "CalendarEventSegue", sender: selectedEvent)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CalendarEventSegue" {
+            if let eventDetailVC = segue.destination as? CalendarEventViewController {
+                if let eventSelected = sender as? CalendarEvent {
+                    eventDetailVC.calendarEvent = eventSelected
+                    
+                }
+            }
+        }
     }
 
 

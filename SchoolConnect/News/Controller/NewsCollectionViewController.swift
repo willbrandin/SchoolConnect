@@ -26,7 +26,6 @@ class NewsCollectionViewController: UICollectionViewController {
         let date = Date()
         let news = NewsArticle(title: "Life School News", subtitle: "Your news for the week", pubDate: date)
         newsArray.append(news)
-        print(news.title)
         self.collectionView?.reloadData()
     }
 
@@ -51,7 +50,7 @@ class NewsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var selectedArticle: NewsArticle!
         selectedArticle = newsArray[indexPath.row]
-        self.performSegue(withIdentifier: "NewsArticleSegue", sender: selectedArticle)
+        performSegue(withIdentifier: "NewsArticleSegue", sender: selectedArticle)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

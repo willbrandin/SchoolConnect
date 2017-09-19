@@ -188,7 +188,6 @@
                                 <connections>
                                     <outlet property="date" destination="bhk-Dx-ZSt" id="lyB-fH-oOV"/>
                                     <outlet property="title" destination="oCu-de-yLR" id="wnh-Ep-jiC"/>
-                                    <segue destination="u7y-ts-yWa" kind="show" identifier="CalendarEventSegue" id="emn-Br-YIP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -198,6 +197,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Calendar Events" id="sb0-vE-0B8"/>
+                    <connections>
+                        <segue destination="u7y-ts-yWa" kind="show" identifier="CalendarEventSegue" id="2AC-Fq-ARq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIJ-0Z-zz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,7 +338,6 @@
                                     <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
                                     <outlet property="subtitleLabel" destination="Zc5-XT-Uyf" id="dzC-0Y-RP9"/>
                                     <outlet property="titleLabel" destination="zHV-uo-CBo" id="8uk-9k-o8E"/>
-                                    <segue destination="YhM-qH-ApF" kind="show" identifier="NewsArticleSegue" id="1o4-YZ-kxN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -346,6 +347,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="News" id="NgJ-27-aXd"/>
+                    <connections>
+                        <segue destination="YhM-qH-ApF" kind="show" identifier="NewsArticleSegue" id="Kyz-Pk-G16"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyw-DY-AG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

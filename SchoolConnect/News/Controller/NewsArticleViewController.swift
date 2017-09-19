@@ -14,7 +14,13 @@ class NewsArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
-    
+    func setupView() {
+        guard let title = article.title else {
+            return
+        }
+        self.title = title
+    }
 
 }
