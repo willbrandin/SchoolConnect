@@ -188,7 +188,7 @@
                                 <connections>
                                     <outlet property="date" destination="bhk-Dx-ZSt" id="lyB-fH-oOV"/>
                                     <outlet property="title" destination="oCu-de-yLR" id="wnh-Ep-jiC"/>
-                                    <segue destination="u7y-ts-yWa" kind="show" identifier="NewsArticleSegue" id="emn-Br-YIP"/>
+                                    <segue destination="u7y-ts-yWa" kind="show" identifier="CalendarEventSegue" id="emn-Br-YIP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -336,7 +336,7 @@
                                     <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
                                     <outlet property="subtitleLabel" destination="Zc5-XT-Uyf" id="dzC-0Y-RP9"/>
                                     <outlet property="titleLabel" destination="zHV-uo-CBo" id="8uk-9k-o8E"/>
-                                    <segue destination="YhM-qH-ApF" kind="show" identifier="CalendarEventSegue" id="1o4-YZ-kxN"/>
+                                    <segue destination="YhM-qH-ApF" kind="show" identifier="NewsArticleSegue" id="1o4-YZ-kxN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -351,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="1412" y="260.41979010494754"/>
         </scene>
-        <!--View Controller-->
+        <!--News Article View Controller-->
         <scene sceneID="Qps-u1-7HE">
             <objects>
-                <viewController id="YhM-qH-ApF" sceneMemberID="viewController">
+                <viewController id="YhM-qH-ApF" customClass="NewsArticleViewController" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e9W-Id-e3X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

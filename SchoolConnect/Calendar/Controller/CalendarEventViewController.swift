@@ -10,7 +10,7 @@ import UIKit
 
 class CalendarEventViewController: UIViewController {
 
-    let calendarEvent: CalendarEvent!
+    //var calendarEvent: CalendarEvent!
     
     override func viewDidLoad() {
         super.viewDidLoad()

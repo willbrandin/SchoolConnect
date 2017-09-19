@@ -10,12 +10,10 @@ import UIKit
 
 class NewsArticleViewController: UIViewController {
 
-    let article: NewsArticle!
+    var article: NewsArticle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 

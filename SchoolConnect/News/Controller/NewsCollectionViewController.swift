@@ -26,6 +26,7 @@ class NewsCollectionViewController: UICollectionViewController {
         let date = Date()
         let news = NewsArticle(title: "Life School News", subtitle: "Your news for the week", pubDate: date)
         newsArray.append(news)
+        print(news.title)
         self.collectionView?.reloadData()
     }
 
@@ -48,10 +49,19 @@ class NewsCollectionViewController: UICollectionViewController {
     
     //Sends Cell information to be accessed in the View Controller
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "NewsArticleSegue", sender: nil)
+        var selectedArticle: NewsArticle!
+        selectedArticle = newsArray[indexPath.row]
+        self.performSegue(withIdentifier: "NewsArticleSegue", sender: selectedArticle)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewsArticleSegue" {
+            if let newsArticleDetailVC = segue.destination as? NewsArticleViewController {
+                if let articleSelected = sender as? NewsArticle {
+                    newsArticleDetailVC.article = articleSelected
+                }
+            }
+        }
     }
     
 
