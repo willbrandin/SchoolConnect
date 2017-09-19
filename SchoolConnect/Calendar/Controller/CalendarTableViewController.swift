@@ -17,7 +17,7 @@ class CalendarTableViewController: UITableViewController {
         downloadEventData()
     }
     
-
+    ///Parses data for calendar event. 
     func downloadEventData() {
         //Get DATA
         //Must convert DATE STRING to a DATE OBJECT
@@ -28,6 +28,8 @@ class CalendarTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    
+    //Table View Logic
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,6 +50,7 @@ class CalendarTableViewController: UITableViewController {
         }
         
     }
+    
     //Sends TblVw Cell Data and sends it to the ViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var selectedEvent: CalendarEvent!
