@@ -122,7 +122,7 @@
         <scene sceneID="7Gn-al-wBU">
             <objects>
                 <tableViewController id="X9h-cH-Dz8" customClass="CalendarTableViewController" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6tG-kw-eZL" customClass="Cal">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6tG-kw-eZL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,8 +145,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="222" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafeteria Bake Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-de-yLR">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="212.5" height="39"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="222" height="39"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -188,7 +188,7 @@
                                 <connections>
                                     <outlet property="date" destination="bhk-Dx-ZSt" id="lyB-fH-oOV"/>
                                     <outlet property="title" destination="oCu-de-yLR" id="wnh-Ep-jiC"/>
-                                    <segue destination="u7y-ts-yWa" kind="show" id="emn-Br-YIP"/>
+                                    <segue destination="u7y-ts-yWa" kind="show" identifier="NewsArticleSegue" id="emn-Br-YIP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="1440.8" y="1085.3073463268368"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar Event View Controller-->
         <scene sceneID="7Lz-lh-eej">
             <objects>
-                <viewController id="u7y-ts-yWa" sceneMemberID="viewController">
+                <viewController id="u7y-ts-yWa" customClass="CalendarEventViewController" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nvd-PL-BYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,7 +336,7 @@
                                     <outlet property="pubDateLabel" destination="NHw-VJ-mP5" id="F4T-bQ-I2K"/>
                                     <outlet property="subtitleLabel" destination="Zc5-XT-Uyf" id="dzC-0Y-RP9"/>
                                     <outlet property="titleLabel" destination="zHV-uo-CBo" id="8uk-9k-o8E"/>
-                                    <segue destination="YhM-qH-ApF" kind="show" id="1o4-YZ-kxN"/>
+                                    <segue destination="YhM-qH-ApF" kind="show" identifier="CalendarEventSegue" id="1o4-YZ-kxN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

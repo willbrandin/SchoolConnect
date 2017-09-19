@@ -1,5 +1,5 @@
 //
-//  NewsArticleViewController.swift
+//  CalendarEventViewController.swift
 //  SchoolConnect
 //
 //  Created by William S. Brandin on 9/18/17.
@@ -8,15 +8,16 @@
 
 import UIKit
 
-class NewsArticleViewController: UIViewController {
+class CalendarEventViewController: UIViewController {
 
-    let article: NewsArticle!
+    let calendarEvent: CalendarEvent!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
     
 
 }

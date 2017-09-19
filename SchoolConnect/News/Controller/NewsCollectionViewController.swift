@@ -21,7 +21,11 @@ class NewsCollectionViewController: UICollectionViewController {
     
     func downloadNewsData() {
         //GET DATA?
-        
+        //GET pubDate as a string object and convert to DATE object. Will display class DATE.
+        //Store as a string?
+        let date = Date()
+        let news = NewsArticle(title: "Life School News", subtitle: "Your news for the week", pubDate: date)
+        newsArray.append(news)
         self.collectionView?.reloadData()
     }
 
@@ -41,7 +45,14 @@ class NewsCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
     }
-
-   
+    
+    //Sends Cell information to be accessed in the View Controller
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "NewsArticleSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
 
 }

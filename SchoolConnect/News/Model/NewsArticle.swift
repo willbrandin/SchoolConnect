@@ -13,10 +13,10 @@ class NewsArticle {
     var title: String!
     var subtitle: String!
     var source: String!
-    var pubDate: String!
+    var pubDate: Date!
     var imgUrl: String!
     
-    init(title: String, subtitle: String, pubDate: String) {
+    init(title: String, subtitle: String, pubDate: Date) {
         self.title = title
         self.subtitle = subtitle
         self.pubDate = pubDate

@@ -14,12 +14,17 @@ class CalendarTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        downloadEventData()
     }
-
+    
 
     func downloadEventData() {
         //Get DATA
+        //Must convert DATE STRING to a DATE OBJECT
+        
+        let date = Date()
+        let newEvent = CalendarEvent(title: "Hello people!", date: date)
+        eventsArray.append(newEvent)
         self.tableView.reloadData()
     }
     
@@ -32,11 +37,10 @@ class CalendarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 20
+        return eventsArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell", for: indexPath) as? CalendarTableViewCell {
-            
             cell.configureCell(eventsArray[indexPath.row])
             return cell
         } else {
@@ -44,7 +48,11 @@ class CalendarTableViewController: UITableViewController {
         }
         
     }
+    //Sends TblVw Cell Data and sends it to the ViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "CalendarEventSegue", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 
 

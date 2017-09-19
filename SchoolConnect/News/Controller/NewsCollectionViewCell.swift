@@ -22,13 +22,20 @@ class NewsCollectionViewCell: UICollectionViewCell {
     func configureCell(news: NewsArticle) {
         titleLabel.text = news.title
         subtitleLabel.text = news.subtitle
-        pubDateLabel.text = news.pubDate
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+        let date = dateFormatter.string(from: news.pubDate)
+        
+        pubDateLabel.text = date
     }
     
     func makeShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 10)
-        self.layer.shadowOpacity = 0.2
+        self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 15.0
     }
 }
