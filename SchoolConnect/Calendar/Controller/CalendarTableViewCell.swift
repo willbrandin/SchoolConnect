@@ -15,7 +15,6 @@ class CalendarTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func configureCell(_ event: CalendarEvent) {

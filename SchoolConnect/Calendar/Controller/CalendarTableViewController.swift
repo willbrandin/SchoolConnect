@@ -19,6 +19,7 @@ class CalendarTableViewController: UITableViewController {
 
 
     func downloadEventData() {
+        //Get DATA
         self.tableView.reloadData()
     }
     
@@ -31,10 +32,11 @@ class CalendarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return eventsArray.count
+        return 20
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell", for: indexPath) as? CalendarTableViewCell {
+            
             cell.configureCell(eventsArray[indexPath.row])
             return cell
         } else {

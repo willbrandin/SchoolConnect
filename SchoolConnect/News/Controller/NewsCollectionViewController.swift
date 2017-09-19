@@ -13,8 +13,6 @@ private let reuseIdentifier = "NewsArticleCell"
 class NewsCollectionViewController: UICollectionViewController {
     
     var newsArray = [NewsArticle]()
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +21,7 @@ class NewsCollectionViewController: UICollectionViewController {
     
     func downloadNewsData() {
         //GET DATA?
-        let story1 = NewsArticle(title: "Life School wins", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
-        let story2 = NewsArticle(title: "Oak Cliff wins award", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
-        let story3 = NewsArticle(title: "New High School", subtitle: "Life school is a great school in Dallas", pubDate: "12/15/1993")
-        newsArray.append(story1)
-        newsArray.append(story2)
-        newsArray.append(story3)
+        
         self.collectionView?.reloadData()
     }
 
