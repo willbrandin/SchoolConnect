@@ -394,10 +394,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-pP-Z3K" customClass="NewsView" customModule="SchoolConnect" customModuleProvider="target">
-                                            <rect key="frame" x="21" y="14" width="333" height="408"/>
+                                            <rect key="frame" x="22.5" y="14" width="330" height="408"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="Zr3-Qd-o7Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="275"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="275"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-7N-wL9">
                                                     <rect key="frame" x="16" y="292" width="265" height="94.5"/>
@@ -444,9 +444,9 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="Hpj-pP-Z3K" firstAttribute="top" secondItem="8S3-DX-dZ6" secondAttribute="top" constant="14" id="29n-Za-gJz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hpj-pP-Z3K" secondAttribute="trailing" constant="21" id="31l-oh-3eu"/>
                                     <constraint firstAttribute="bottom" secondItem="Hpj-pP-Z3K" secondAttribute="bottom" constant="36" id="6Sr-XQ-f5N"/>
-                                    <constraint firstItem="Hpj-pP-Z3K" firstAttribute="leading" secondItem="8S3-DX-dZ6" secondAttribute="leading" constant="21" id="Pvr-1c-Eic"/>
+                                    <constraint firstItem="Hpj-pP-Z3K" firstAttribute="centerX" secondItem="8S3-DX-dZ6" secondAttribute="centerX" id="Fa7-Xl-Qpr"/>
+                                    <constraint firstItem="Hpj-pP-Z3K" firstAttribute="width" secondItem="8S3-DX-dZ6" secondAttribute="width" constant="-45" id="rZk-7Q-WPr"/>
                                 </constraints>
                                 <size key="customSize" width="375" height="458"/>
                                 <connections>

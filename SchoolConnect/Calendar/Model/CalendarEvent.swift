@@ -10,9 +10,9 @@ import Foundation
 
 class CalendarEvent {
     var title: String
-    var date: Date
+    var date: String
     
-    init(title: String, date: Date) {
+    init(title: String, date: String) {
         self.title = title
         self.date = date
     }

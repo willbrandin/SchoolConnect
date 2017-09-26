@@ -7,27 +7,51 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class CalendarTableViewController: UITableViewController {
-
+    
+    
+    
     var eventsArray = [CalendarEvent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadEventData()
+//        dateCheck()
+    }
+    ///Checks the Date and compares
+    func dateCheck() {
+        let currentDate = Date()
+        //error with date format
+        let oldDate = DateFormatter().date(from: "12/15/2015")
+        if oldDate! > currentDate {
+            print("True")
+        } else {
+            print("you're dumb")
+        }
     }
     
     ///Parses data for calendar event. 
     func downloadEventData() {
-        //Get DATA
-        //Must convert DATE STRING to a DATE OBJECT
+        //Firebase Reference
+        let ref = Database.database().reference()
         
-        let date = Date()
-        let newEvent = CalendarEvent(title: "Hello people!", date: date)
-        let otherEvent = CalendarEvent(title: "New Calendar Event", date: date)
-        eventsArray.append(newEvent)
-        eventsArray.append(otherEvent)
-        self.tableView.reloadData()
+        let calendarEventRef = ref.child(SCHOOL_NAME).child("CalendarEvents")
+        calendarEventRef.observe(.childAdded) { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                guard let title = dictionary["title"] as? String else {
+                    return
+                }
+                guard let date = dictionary["date"] as? String else {
+                    return
+                }
+                let newEvent = CalendarEvent(title: title, date: date)
+                self.eventsArray.append(newEvent)
+                self.tableView.reloadData()
+            }
+        }
     }
     
     

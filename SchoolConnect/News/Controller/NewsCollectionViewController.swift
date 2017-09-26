@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 private let reuseIdentifier = "NewsArticleCell"
 
@@ -20,16 +22,29 @@ class NewsCollectionViewController: UICollectionViewController {
     }
     
     func downloadNewsData() {
-        //GET data from Firebase or Backend
         
-        //GET pubDate as a string object and convert to DATE object. Will display class DATE.
-        //Store as a string?
+        let ref = Database.database().reference()
         
-        let news = NewsArticle(title: "Title Article", subtitle: "Subtitle for Article", pubDate: Date())
-        let otherNews = NewsArticle(title: "Other News Title", subtitle: "Football student wins super hard game", pubDate: Date())
-        newsArray.append(news)
-        newsArray.append(otherNews)
-        self.collectionView?.reloadData()
+        let newsRef = ref.child(SCHOOL_NAME).child("News")
+        newsRef.observe(.childAdded) { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                print(snapshot)
+                guard let title = dictionary["title"] as? String else {
+                    return
+                }
+                guard let subtitle = dictionary["subtitle"] as? String else {
+                    return
+                }
+                guard let date = dictionary["pubDate"] as? String else {
+                    return
+                }
+                let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: date)
+                self.newsArray.append(newArticle)
+                self.collectionView?.reloadData()
+            }
+        }
+        
+        
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -19,14 +19,8 @@ class CalendarTableViewCell: UITableViewCell {
     
     func configureCell(_ event: CalendarEvent) {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale(identifier: "en_US")
-        let date = dateFormatter.string(from: event.date)
-        
         self.title.text = event.title
-        self.date.text = date
+        self.date.text = event.date
     }
     
 
