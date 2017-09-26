@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 
 class NotificationTableViewController: UITableViewController {
@@ -20,26 +21,27 @@ class NotificationTableViewController: UITableViewController {
     }
 
     func downloadPushNotificationData() {
-        let newNotif = PushNotif(title: "New Event Here!", message: "There is a new event going on that will be sooo cool!")
-        let otherNotif = PushNotif(title: "Some other Title!", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat")
-        notificationArray.append(newNotif)
-        notificationArray.append(otherNotif)
         
-        
-        
-        tableView.reloadData()
+        let ref = Database.database().reference()
+        let notificationRef = ref.child(SCHOOL_NAME).child("Notifications")
+        notificationRef.observe(.childAdded) { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                guard let title = dictionary["title"] as? String else { return }
+                guard let message = dictionary["message"] as? String else { return }
+                let newNotification = PushNotif(title: title, message: message)
+                self.notificationArray.append(newNotification)
+                self.tableView.reloadData()
+            }
+        }
     }
     
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notificationArray.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as? NotificationTableViewCell {
@@ -55,6 +57,7 @@ class NotificationTableViewController: UITableViewController {
         selectedNotification = notificationArray[indexPath.row]
         performSegue(withIdentifier: "didClickNotification", sender: selectedNotification)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didClickNotification" {
             if let notifDetailVC = segue.destination as? NotificationViewController {

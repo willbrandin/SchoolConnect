@@ -24,27 +24,18 @@ class NewsCollectionViewController: UICollectionViewController {
     func downloadNewsData() {
         
         let ref = Database.database().reference()
-        
         let newsRef = ref.child(SCHOOL_NAME).child("News")
         newsRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 print(snapshot)
-                guard let title = dictionary["title"] as? String else {
-                    return
-                }
-                guard let subtitle = dictionary["subtitle"] as? String else {
-                    return
-                }
-                guard let date = dictionary["pubDate"] as? String else {
-                    return
-                }
+                guard let title = dictionary["title"] as? String else { return }
+                guard let subtitle = dictionary["subtitle"] as? String else { return }
+                guard let date = dictionary["pubDate"] as? String else { return }
                 let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: date)
                 self.newsArray.append(newArticle)
                 self.collectionView?.reloadData()
             }
         }
-        
-        
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -80,6 +71,4 @@ class NewsCollectionViewController: UICollectionViewController {
             }
         }
     }
-    
-
 }

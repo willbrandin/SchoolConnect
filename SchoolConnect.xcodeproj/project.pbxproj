@@ -95,8 +95,8 @@
 		030964C31F701EC800109AF0 /* SchoolConnect */ = {
 			isa = PBXGroup;
 			children = (
-				03C2CF3C1F79E30200A6E07C /* Notifications */,
 				030964DC1F701F2A00109AF0 /* Singles */,
+				03C2CF3C1F79E30200A6E07C /* Notifications */,
 				03DD73881F70926500F09808 /* Calendar */,
 				03A2F59B1F70285100B8C78E /* News */,
 				030964C81F701EC800109AF0 /* Main.storyboard */,
