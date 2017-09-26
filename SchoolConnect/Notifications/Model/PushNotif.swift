@@ -8,8 +8,8 @@
 
 import Foundation
 class PushNotif {
-    let title: String
-    let message: String
+    let title: String!
+    let message: String!
     
     init(title: String, message: String) {
         self.title = title

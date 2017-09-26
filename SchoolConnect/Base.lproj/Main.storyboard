@@ -41,7 +41,11 @@
                         <viewLayoutGuide key="safeArea" id="BN4-D9-NpY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="brH-OT-l0G">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="EeH-yq-sTn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="EeH-yq-sTn">
+                            <connections>
+                                <segue destination="NYr-Tz-Kia" kind="show" id="XWC-rJ-cXX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="NYr-Tz-Kia" kind="show" action="showDetailViewController:sender:" id="vzR-C8-DDm"/>
@@ -118,13 +122,41 @@
                     <view key="view" contentMode="scaleToFill" id="B8i-UY-d8A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-oc-cj9">
+                                <rect key="frame" x="36" y="136" width="319" height="452"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Hello" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-Wc-T9e">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="237"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-z5-rZP" customClass="NotifRoundedImage" customModule="SchoolConnect" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="237" width="319" height="215"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mlc-z5-rZP" firstAttribute="centerX" secondItem="S1v-oc-cj9" secondAttribute="centerX" id="YXU-fm-NLj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S1v-oc-cj9" firstAttribute="top" secondItem="FfX-sO-1Sw" secondAttribute="top" constant="20" id="885-O4-LfA"/>
+                            <constraint firstItem="FfX-sO-1Sw" firstAttribute="trailing" secondItem="S1v-oc-cj9" secondAttribute="trailing" constant="20" id="I3q-JF-JT5"/>
+                            <constraint firstItem="FfX-sO-1Sw" firstAttribute="bottom" secondItem="S1v-oc-cj9" secondAttribute="bottom" constant="30" id="Z73-ko-fkV"/>
+                            <constraint firstItem="S1v-oc-cj9" firstAttribute="leading" secondItem="B8i-UY-d8A" secondAttribute="leadingMargin" constant="20" id="ujE-oC-pTg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FfX-sO-1Sw"/>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="gHN-Wc-T9e" id="vKa-VM-xET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFv-ca-jg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="-1110"/>
+            <point key="canvasLocation" x="248.80000000000001" y="-1110.4947526236883"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="X3h-ZA-Rwd">
@@ -466,4 +498,7 @@
         <image name="ls-default news" width="312" height="215"/>
         <image name="news_grid" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vzR-C8-DDm"/>
+    </inferredMetricsTieBreakers>
 </document>

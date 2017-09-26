@@ -18,6 +18,11 @@ class NotificationTableViewController: UITableViewController {
     }
 
     func downloadPushNotificationData() {
+        let newNotif = PushNotif(title: "New Event Here!", message: "There is a new event going on that will be sooo cool!")
+        let otherNotif = PushNotif(title: "Some other Title!", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat")
+        notificationArray.append(newNotif)
+        notificationArray.append(otherNotif)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -54,5 +59,4 @@ class NotificationTableViewController: UITableViewController {
             }
         }
     }
-    
 }

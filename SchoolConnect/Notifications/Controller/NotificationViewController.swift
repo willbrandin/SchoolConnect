@@ -11,11 +11,21 @@ import UIKit
 class NotificationViewController: UIViewController {
 
     var notification: PushNotif!
+    @IBOutlet weak var message: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
+    }
+    func setupView() {
+        guard let title = notification.title else {
+            return
+        }
+        guard let message = notification.message else {
+            return
+        }
+        self.title = title
+        self.message.text = message
     }
 
 
