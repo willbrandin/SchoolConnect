@@ -12,6 +12,7 @@
 		030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030964CB1F701EC800109AF0 /* SchoolConnect.xcdatamodeld */; };
 		030964CF1F701EC800109AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030964CE1F701EC800109AF0 /* Assets.xcassets */; };
 		030964D21F701EC800109AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030964D01F701EC800109AF0 /* LaunchScreen.storyboard */; };
+		03100A861F79F0A500CF5DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */; };
 		0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */; };
 		037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */; };
 		037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738B1F70926500F09808 /* CalendarTableViewController.swift */; };
@@ -27,6 +28,7 @@
 		03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */; };
 		03C2CF491F79EAA100A6E07C /* NotifRoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF481F79EAA100A6E07C /* NotifRoundedImage.swift */; };
 		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
+		CD4BA9CE9DAB67F1AFA284A8 /* Pods_SchoolConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191CA21EAA9FE734A925495C /* Pods_SchoolConnect.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		030964CE1F701EC800109AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030964D11F701EC800109AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030964D31F701EC800109AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventViewController.swift; sourceTree = "<group>"; };
 		03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
 		03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		03DD738B1F70926500F09808 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		03DD738E1F70926500F09808 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03DD738F1F70929B00F09808 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		07AC27D963E614453BDA0B7D /* Pods-SchoolConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect.release.xcconfig"; sourceTree = "<group>"; };
+		191CA21EAA9FE734A925495C /* Pods_SchoolConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456B12D064A21A25466CC990 /* Pods-SchoolConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4BA9CE9DAB67F1AFA284A8 /* Pods_SchoolConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +77,8 @@
 			children = (
 				030964C31F701EC800109AF0 /* SchoolConnect */,
 				030964C21F701EC800109AF0 /* Products */,
+				7F328A1793186AA3D8C5C871 /* Pods */,
+				C5CF18EA5E79AE2E6B91AAEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +102,7 @@
 				030964D01F701EC800109AF0 /* LaunchScreen.storyboard */,
 				030964D31F701EC800109AF0 /* Info.plist */,
 				030964CB1F701EC800109AF0 /* SchoolConnect.xcdatamodeld */,
+				03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */,
 			);
 			path = SchoolConnect;
 			sourceTree = "<group>";
@@ -213,6 +223,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7F328A1793186AA3D8C5C871 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				456B12D064A21A25466CC990 /* Pods-SchoolConnect.debug.xcconfig */,
+				07AC27D963E614453BDA0B7D /* Pods-SchoolConnect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5CF18EA5E79AE2E6B91AAEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				191CA21EAA9FE734A925495C /* Pods_SchoolConnect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 030964D61F701EC800109AF0 /* Build configuration list for PBXNativeTarget "SchoolConnect" */;
 			buildPhases = (
+				FEE031DE5D7F93521A17D745 /* [CP] Check Pods Manifest.lock */,
 				030964BD1F701EC800109AF0 /* Sources */,
 				030964BE1F701EC800109AF0 /* Frameworks */,
 				030964BF1F701EC800109AF0 /* Resources */,
+				81FD022B5DD32048D5A1F368 /* [CP] Embed Pods Frameworks */,
+				4D08EA78A88FEB20A15D3113 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,12 +303,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				030964D21F701EC800109AF0 /* LaunchScreen.storyboard in Resources */,
+				03100A861F79F0A500CF5DA3 /* GoogleService-Info.plist in Resources */,
 				030964CF1F701EC800109AF0 /* Assets.xcassets in Resources */,
 				030964CA1F701EC800109AF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D08EA78A88FEB20A15D3113 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81FD022B5DD32048D5A1F368 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE031DE5D7F93521A17D745 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		030964BD1F701EC800109AF0 /* Sources */ = {
@@ -436,6 +515,7 @@
 		};
 		030964D71F701EC800109AF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456B12D064A21A25466CC990 /* Pods-SchoolConnect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +531,7 @@
 		};
 		030964D81F701EC800109AF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07AC27D963E614453BDA0B7D /* Pods-SchoolConnect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

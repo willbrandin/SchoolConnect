@@ -43,13 +43,10 @@
                     <navigationItem key="navigationItem" title="Home" id="brH-OT-l0G">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="EeH-yq-sTn">
                             <connections>
-                                <segue destination="NYr-Tz-Kia" kind="show" id="XWC-rJ-cXX"/>
+                                <segue destination="NYr-Tz-Kia" kind="show" identifier="showNotifs" id="XWC-rJ-cXX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="NYr-Tz-Kia" kind="show" action="showDetailViewController:sender:" id="vzR-C8-DDm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWR-87-A13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +176,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhl-C9-dRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2649" y="-70"/>
+            <point key="canvasLocation" x="-3080" y="-214"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="xoI-vf-Q8D">
@@ -302,7 +299,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yD-SN-eGZ">
-                                                <rect key="frame" x="77.5" y="27.5" width="34" height="30"/>
+                                                <rect key="frame" x="77" y="27.5" width="34" height="30"/>
                                                 <state key="normal" title="Save">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -353,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHO-1g-1w5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="1684"/>
+            <point key="canvasLocation" x="-643" y="1839"/>
         </scene>
         <!--News-->
         <scene sceneID="fhC-SF-Ngo">
@@ -498,7 +495,4 @@
         <image name="ls-default news" width="312" height="215"/>
         <image name="news_grid" width="20" height="20"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="vzR-C8-DDm"/>
-    </inferredMetricsTieBreakers>
 </document>
