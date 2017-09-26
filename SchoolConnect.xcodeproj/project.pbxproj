@@ -116,8 +116,8 @@
 		030964DB1F701EFE00109AF0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */,
 				03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */,
+				03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */,
 				03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */,
 			);
 			path = Controller;
@@ -190,9 +190,9 @@
 		03DD73891F70926500F09808 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */,
 				03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */,
 				03DD738B1F70926500F09808 /* CalendarTableViewController.swift */,
-				0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

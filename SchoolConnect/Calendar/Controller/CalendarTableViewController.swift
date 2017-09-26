@@ -24,7 +24,9 @@ class CalendarTableViewController: UITableViewController {
         
         let date = Date()
         let newEvent = CalendarEvent(title: "Hello people!", date: date)
+        let otherEvent = CalendarEvent(title: "New Calendar Event", date: date)
         eventsArray.append(newEvent)
+        eventsArray.append(otherEvent)
         self.tableView.reloadData()
     }
     

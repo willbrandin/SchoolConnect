@@ -26,7 +26,9 @@ class NewsCollectionViewController: UICollectionViewController {
         //Store as a string?
         
         let news = NewsArticle(title: "Title Article", subtitle: "Subtitle for Article", pubDate: Date())
+        let otherNews = NewsArticle(title: "Other News Title", subtitle: "Football student wins super hard game", pubDate: Date())
         newsArray.append(news)
+        newsArray.append(otherNews)
         self.collectionView?.reloadData()
     }
 
