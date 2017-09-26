@@ -20,11 +20,12 @@ class NewsCollectionViewController: UICollectionViewController {
     }
     
     func downloadNewsData() {
-        //GET DATA?
+        //GET data from Firebase or Backend
+        
         //GET pubDate as a string object and convert to DATE object. Will display class DATE.
         //Store as a string?
-        let date = Date()
-        let news = NewsArticle(title: "Life School News", subtitle: "Your news for the week", pubDate: date)
+        
+        let news = NewsArticle(title: "Title Article", subtitle: "Subtitle for Article", pubDate: Date())
         newsArray.append(news)
         self.collectionView?.reloadData()
     }

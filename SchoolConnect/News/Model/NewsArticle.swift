@@ -22,7 +22,3 @@ class NewsArticle {
         self.pubDate = pubDate
     }
 }
-
-
-
-

@@ -21,6 +21,10 @@
 		03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A21F7029C400B8C78E /* NewsArticle.swift */; };
 		03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A41F702AFB00B8C78E /* NewsView.swift */; };
 		03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */; };
+		03C2CF411F79E34600A6E07C /* PushNotif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF401F79E34600A6E07C /* PushNotif.swift */; };
+		03C2CF431F79E40600A6E07C /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF421F79E40600A6E07C /* NotificationTableViewController.swift */; };
+		03C2CF451F79E48700A6E07C /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */; };
+		03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */; };
 		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,10 @@
 		03A2F5A21F7029C400B8C78E /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		03A2F5A41F702AFB00B8C78E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		03C2CF401F79E34600A6E07C /* PushNotif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotif.swift; sourceTree = "<group>"; };
+		03C2CF421F79E40600A6E07C /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		03DD738B1F70926500F09808 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		03DD738E1F70926500F09808 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		030964C31F701EC800109AF0 /* SchoolConnect */ = {
 			isa = PBXGroup;
 			children = (
+				03C2CF3C1F79E30200A6E07C /* Notifications */,
 				030964DC1F701F2A00109AF0 /* Singles */,
 				03DD73881F70926500F09808 /* Calendar */,
 				03A2F59B1F70285100B8C78E /* News */,
@@ -105,8 +114,8 @@
 		030964DB1F701EFE00109AF0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */,
 				03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */,
+				03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */,
 				03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */,
 			);
 			path = Controller;
@@ -128,6 +137,41 @@
 				030964D91F701EF300109AF0 /* Model */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		03C2CF3C1F79E30200A6E07C /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				03C2CF3F1F79E31700A6E07C /* Controller */,
+				03C2CF3E1F79E31300A6E07C /* View */,
+				03C2CF3D1F79E30E00A6E07C /* Model */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		03C2CF3D1F79E30E00A6E07C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03C2CF401F79E34600A6E07C /* PushNotif.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03C2CF3E1F79E31300A6E07C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03C2CF3F1F79E31700A6E07C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */,
+				03C2CF421F79E40600A6E07C /* NotificationTableViewController.swift */,
+				03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		03DD73881F70926500F09808 /* Calendar */ = {
@@ -240,11 +284,15 @@
 			files = (
 				030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */,
 				0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */,
+				03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */,
+				03C2CF431F79E40600A6E07C /* NotificationTableViewController.swift in Sources */,
 				037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */,
 				03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */,
 				03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */,
+				03C2CF451F79E48700A6E07C /* NotificationTableViewCell.swift in Sources */,
 				03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */,
 				03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */,
+				03C2CF411F79E34600A6E07C /* PushNotif.swift in Sources */,
 				037BD8D31F7094AC00B4E8DD /* CalendarView.swift in Sources */,
 				03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */,
 				03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */,
