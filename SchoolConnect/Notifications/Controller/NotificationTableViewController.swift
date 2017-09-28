@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class NotificationTableViewController: UITableViewController {
 
+    
     var notificationArray = [PushNotif]()
     
     override func viewDidLoad() {

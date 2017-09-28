@@ -295,26 +295,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YeR-pU-7lT">
                                 <rect key="frame" x="0.0" y="116" width="375" height="85"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-BJ-ePC">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-JH-kSX">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="85"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yD-SN-eGZ">
-                                                <rect key="frame" x="77" y="27.5" width="34" height="30"/>
-                                                <state key="normal" title="Save">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.78370090260000003" green="0.28829220849999998" blue="0.42530450390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="3yD-SN-eGZ" firstAttribute="centerX" secondItem="zbU-BJ-ePC" secondAttribute="centerX" id="AHg-IT-aLV"/>
-                                            <constraint firstItem="3yD-SN-eGZ" firstAttribute="centerY" secondItem="zbU-BJ-ePC" secondAttribute="centerY" id="acE-gk-ZSN"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3H-zW-AiV">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Save to Calendar">
+                                            <color key="titleColor" red="0.090196078431372548" green="0.13725490196078433" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressSaveToCalendar:" destination="u7y-ts-yWa" eventType="touchUpInside" id="Jyb-ZM-pDM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k63-Gf-ZlI">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="85"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Share"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" red="0.68235294117647061" green="0.52941176470588236" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShare:" destination="u7y-ts-yWa" eventType="touchUpInside" id="od8-6h-f2a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -27,11 +27,14 @@ class NewsCollectionViewController: UICollectionViewController {
         let newsRef = ref.child(SCHOOL_NAME).child("News")
         newsRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
-                print(snapshot)
+                print(dictionary)
                 guard let title = dictionary["title"] as? String else { return }
                 guard let subtitle = dictionary["subtitle"] as? String else { return }
                 guard let date = dictionary["pubDate"] as? String else { return }
-                let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: date)
+                guard let source = dictionary["source"] as? String else { return }
+                guard let imgUrl = dictionary["imgUrl"] as? String else { return }
+                guard let story = dictionary["story"] as? String else { return }
+                let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: date, source: source, imgUrl: imgUrl, story: story)
                 self.newsArray.append(newArticle)
                 self.collectionView?.reloadData()
             }

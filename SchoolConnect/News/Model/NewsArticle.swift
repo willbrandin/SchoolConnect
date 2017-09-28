@@ -15,10 +15,20 @@ class NewsArticle {
     var source: String!
     var pubDate: String!
     var imgUrl: String!
+    var fullStory: String!
     
     init(title: String, subtitle: String, pubDate: String) {
         self.title = title
         self.subtitle = subtitle
         self.pubDate = pubDate
+    }
+    ///Full Instance
+    init(title: String, subtitle: String, pubDate: String, source: String, imgUrl: String, story: String) {
+        self.title = title
+        self.subtitle = subtitle
+        self.pubDate = pubDate
+        self.source = source
+        self.imgUrl = imgUrl
+        self.fullStory = story
     }
 }

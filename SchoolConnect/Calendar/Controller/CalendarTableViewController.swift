@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+private let reuseIdentifier = "CalendarCell"
+
 class CalendarTableViewController: UITableViewController {
  
     var eventsArray = [CalendarEvent]()
@@ -27,8 +29,11 @@ class CalendarTableViewController: UITableViewController {
         calendarEventRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
-                guard let date = dictionary["date"] as? String else { return }
-                let newEvent = CalendarEvent(title: title, date: date)
+                guard let startDate = dictionary["startDate"] as? String else { return }
+                guard let endDate = dictionary["endDate"] as? String else { return }
+                guard let description = dictionary["description"] as? String else { return }
+                guard let location = dictionary["location"] as? String else { return }
+                let newEvent = CalendarEvent(title: title, startDate: startDate, endDate: endDate, description: description, location: location)
                 self.eventsArray.append(newEvent)
                 self.tableView.reloadData()
             }
@@ -43,7 +48,7 @@ class CalendarTableViewController: UITableViewController {
         return eventsArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarCell", for: indexPath) as? CalendarTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CalendarTableViewCell {
             cell.configureCell(eventsArray[indexPath.row])
             return cell
         } else {
