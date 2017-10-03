@@ -10,3 +10,6 @@ import Foundation
 
 
 let SCHOOL_NAME = "SchoolOfLife"
+let CALENDAR_EVENT = "CalendarEvents"
+let NEWS_ARTICLE = "News"
+let NOTIFICATIONS = "Notifications"

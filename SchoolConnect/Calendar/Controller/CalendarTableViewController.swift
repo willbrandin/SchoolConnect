@@ -21,11 +21,13 @@ class CalendarTableViewController: UITableViewController {
         downloadEventData()
     }
     
-    ///Parses data for calendar event. 
+    /// 1.) Parses data for calendar event
+    /// 2.) Creates a new CalendarEvent Object
+    /// 3.) Appends the new object to the Events Array
     func downloadEventData() {
         //Firebase Reference
         let ref = Database.database().reference()
-        let calendarEventRef = ref.child(SCHOOL_NAME).child("CalendarEvents")
+        let calendarEventRef = ref.child(SCHOOL_NAME).child(CALENDAR_EVENT)
         calendarEventRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }

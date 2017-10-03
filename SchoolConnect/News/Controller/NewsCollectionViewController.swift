@@ -24,10 +24,9 @@ class NewsCollectionViewController: UICollectionViewController {
     func downloadNewsData() {
         
         let ref = Database.database().reference()
-        let newsRef = ref.child(SCHOOL_NAME).child("News")
+        let newsRef = ref.child(SCHOOL_NAME).child(NEWS_ARTICLE)
         newsRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
-                print(dictionary)
                 guard let title = dictionary["title"] as? String else { return }
                 guard let subtitle = dictionary["subtitle"] as? String else { return }
                 guard let date = dictionary["pubDate"] as? String else { return }

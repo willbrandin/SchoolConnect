@@ -9,6 +9,7 @@
 import Foundation
 
 class CalendarEvent {
+    
     var title: String
     var startDate: String
     var endDate: String

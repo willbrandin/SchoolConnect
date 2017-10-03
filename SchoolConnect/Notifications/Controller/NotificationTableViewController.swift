@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+private let reuseIdentifier = "NotificationCell"
 
 class NotificationTableViewController: UITableViewController {
 
@@ -24,7 +25,7 @@ class NotificationTableViewController: UITableViewController {
     func downloadPushNotificationData() {
         
         let ref = Database.database().reference()
-        let notificationRef = ref.child(SCHOOL_NAME).child("Notifications")
+        let notificationRef = ref.child(SCHOOL_NAME).child(NOTIFICATIONS)
         notificationRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
@@ -45,7 +46,7 @@ class NotificationTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as? NotificationTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? NotificationTableViewCell {
             cell.configureCell(notificationArray[indexPath.row])
             return cell
         } else {
