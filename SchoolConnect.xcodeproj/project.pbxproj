@@ -13,6 +13,7 @@
 		030964CF1F701EC800109AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030964CE1F701EC800109AF0 /* Assets.xcassets */; };
 		030964D21F701EC800109AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030964D01F701EC800109AF0 /* LaunchScreen.storyboard */; };
 		03100A861F79F0A500CF5DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */; };
+		0311491B1F85CE8D00FB349E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311491A1F85CE8D00FB349E /* HomeViewController.swift */; };
 		0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */; };
 		0342EEC91F7AC05400305680 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEC81F7AC05400305680 /* constants.swift */; };
 		037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 		030964D11F701EC800109AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030964D31F701EC800109AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0311491A1F85CE8D00FB349E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventViewController.swift; sourceTree = "<group>"; };
 		0342EEC81F7AC05400305680 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
@@ -148,8 +150,17 @@
 		0310D54F1F846D2000DCE041 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				031149191F85CE7700FB349E /* Controller */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		031149191F85CE7700FB349E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0311491A1F85CE8D00FB349E /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		03A2F59B1F70285100B8C78E /* News */ = {
@@ -377,6 +388,7 @@
 			files = (
 				030964CD1F701EC800109AF0 /* SchoolConnect.xcdatamodeld in Sources */,
 				0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */,
+				0311491B1F85CE8D00FB349E /* HomeViewController.swift in Sources */,
 				03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */,
 				03C2CF431F79E40600A6E07C /* NotificationTableViewController.swift in Sources */,
 				037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */,
