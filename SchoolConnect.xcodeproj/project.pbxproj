@@ -30,6 +30,10 @@
 		03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */; };
 		03C2CF491F79EAA100A6E07C /* NotifRoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF481F79EAA100A6E07C /* NotifRoundedImage.swift */; };
 		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
+		03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */; };
+		03F2C6DE1F8BD3CA007F295E /* Link_homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */; };
+		03F2C6E11F8BD464007F295E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6E01F8BD464007F295E /* HomeFeature.swift */; };
+		03F2C6E31F8BDF7D007F295E /* HomeLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6E21F8BDF7D007F295E /* HomeLink.swift */; };
 		CD4BA9CE9DAB67F1AFA284A8 /* Pods_SchoolConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191CA21EAA9FE734A925495C /* Pods_SchoolConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		03DD738B1F70926500F09808 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		03DD738E1F70926500F09808 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03DD738F1F70929B00F09808 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHome_CollectionViewCell.swift; sourceTree = "<group>"; };
+		03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link_homeTableViewCell.swift; sourceTree = "<group>"; };
+		03F2C6E01F8BD464007F295E /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
+		03F2C6E21F8BDF7D007F295E /* HomeLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLink.swift; sourceTree = "<group>"; };
 		07AC27D963E614453BDA0B7D /* Pods-SchoolConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect.release.xcconfig"; sourceTree = "<group>"; };
 		191CA21EAA9FE734A925495C /* Pods_SchoolConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456B12D064A21A25466CC990 /* Pods-SchoolConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolConnect/Pods-SchoolConnect.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 		0310D54F1F846D2000DCE041 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				03F2C6DF1F8BD449007F295E /* Model */,
 				031149191F85CE7700FB349E /* Controller */,
 			);
 			path = Home;
@@ -159,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				0311491A1F85CE8D00FB349E /* HomeViewController.swift */,
+				03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */,
+				03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +254,15 @@
 				03DD738E1F70926500F09808 /* CalendarView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		03F2C6DF1F8BD449007F295E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03F2C6E01F8BD464007F295E /* HomeFeature.swift */,
+				03F2C6E21F8BDF7D007F295E /* HomeLink.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7F328A1793186AA3D8C5C871 /* Pods */ = {
@@ -394,12 +414,16 @@
 				037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */,
 				03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */,
 				03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */,
+				03F2C6DE1F8BD3CA007F295E /* Link_homeTableViewCell.swift in Sources */,
+				03F2C6E31F8BDF7D007F295E /* HomeLink.swift in Sources */,
 				03C2CF451F79E48700A6E07C /* NotificationTableViewCell.swift in Sources */,
 				03C2CF491F79EAA100A6E07C /* NotifRoundedImage.swift in Sources */,
 				03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */,
 				03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */,
+				03F2C6E11F8BD464007F295E /* HomeFeature.swift in Sources */,
 				0342EEC91F7AC05400305680 /* constants.swift in Sources */,
 				03C2CF411F79E34600A6E07C /* PushNotif.swift in Sources */,
+				03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */,
 				037BD8D31F7094AC00B4E8DD /* CalendarView.swift in Sources */,
 				03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */,
 				03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */,
