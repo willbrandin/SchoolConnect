@@ -104,28 +104,28 @@
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzu-OG-EI6">
-                                                                                            <rect key="frame" x="10.5" y="8" width="316" height="100"/>
+                                                                                            <rect key="frame" x="10.5" y="5" width="316" height="100"/>
                                                                                             <subviews>
-                                                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-VK-zxR">
-                                                                                                    <rect key="frame" x="17" y="15" width="282" height="70"/>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-VK-zxR">
+                                                                                                    <rect key="frame" x="0.0" y="12.5" width="316" height="75"/>
                                                                                                     <subviews>
                                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-oU-IJT">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="width" secondItem="Qad-oU-IJT" secondAttribute="height" multiplier="1:1" id="xvq-q9-cbW"/>
                                                                                                             </constraints>
                                                                                                         </imageView>
-                                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a6E-hj-asr">
-                                                                                                            <rect key="frame" x="85" y="0.0" width="197" height="56"/>
+                                                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a6E-hj-asr">
+                                                                                                            <rect key="frame" x="95" y="0.0" width="221" height="68"/>
                                                                                                             <subviews>
-                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBI-Ii-irk">
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="oBI-Ii-irk">
                                                                                                                     <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
                                                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                                                                                     <nil key="textColor"/>
                                                                                                                     <nil key="highlightedColor"/>
                                                                                                                 </label>
-                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-dQ-f15">
-                                                                                                                    <rect key="frame" x="0.0" y="38" width="145" height="18"/>
+                                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-dQ-f15">
+                                                                                                                    <rect key="frame" x="0.0" y="38" width="145" height="30"/>
                                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                                     <nil key="highlightedColor"/>
@@ -137,10 +137,10 @@
                                                                                                 </stackView>
                                                                                             </subviews>
                                                                                             <constraints>
-                                                                                                <constraint firstItem="kgr-VK-zxR" firstAttribute="width" secondItem="zzu-OG-EI6" secondAttribute="width" constant="-34" id="Bhm-3T-3db"/>
+                                                                                                <constraint firstItem="kgr-VK-zxR" firstAttribute="width" secondItem="zzu-OG-EI6" secondAttribute="width" id="Bhm-3T-3db"/>
                                                                                                 <constraint firstItem="kgr-VK-zxR" firstAttribute="centerX" secondItem="zzu-OG-EI6" secondAttribute="centerX" id="KZB-5X-l4q"/>
                                                                                                 <constraint firstItem="kgr-VK-zxR" firstAttribute="centerY" secondItem="zzu-OG-EI6" secondAttribute="centerY" id="cKc-vw-x17"/>
-                                                                                                <constraint firstItem="Qad-oU-IJT" firstAttribute="height" secondItem="zzu-OG-EI6" secondAttribute="height" constant="-30" id="j06-Dz-ir0"/>
+                                                                                                <constraint firstItem="Qad-oU-IJT" firstAttribute="height" secondItem="zzu-OG-EI6" secondAttribute="height" constant="-25" id="j06-Dz-ir0"/>
                                                                                             </constraints>
                                                                                         </view>
                                                                                     </subviews>
@@ -148,8 +148,8 @@
                                                                                 <constraints>
                                                                                     <constraint firstItem="zzu-OG-EI6" firstAttribute="width" secondItem="aRo-Vg-N3f" secondAttribute="width" constant="-20" id="4cm-Az-9xq"/>
                                                                                     <constraint firstItem="zzu-OG-EI6" firstAttribute="centerX" secondItem="aRo-Vg-N3f" secondAttribute="centerX" id="DRY-x8-tDh"/>
-                                                                                    <constraint firstItem="zzu-OG-EI6" firstAttribute="top" secondItem="aRo-Vg-N3f" secondAttribute="top" constant="8" id="KQi-yt-j1f"/>
-                                                                                    <constraint firstAttribute="bottom" secondItem="zzu-OG-EI6" secondAttribute="bottom" constant="12" id="icd-54-229"/>
+                                                                                    <constraint firstItem="zzu-OG-EI6" firstAttribute="top" secondItem="aRo-Vg-N3f" secondAttribute="top" constant="5" id="KQi-yt-j1f"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="zzu-OG-EI6" secondAttribute="bottom" constant="15" id="icd-54-229"/>
                                                                                 </constraints>
                                                                                 <size key="customSize" width="336" height="120"/>
                                                                                 <connections>
@@ -180,7 +180,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wb-9y-meQ">
                                                                 <rect key="frame" x="0.0" y="703.5" width="375" height="331.5"/>
                                                                 <subviews>
-                                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="57l-IO-2wr">
+                                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="57l-IO-2wr">
                                                                         <rect key="frame" x="0.0" y="81.5" width="375" height="250.5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <prototypes>
@@ -188,7 +188,7 @@
                                                                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RnQ-OX-gl6" id="Tka-Fd-QFR">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1M-o5-8IB">

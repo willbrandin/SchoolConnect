@@ -26,18 +26,13 @@ class HomeViewController: UIViewController {
         linksTableView.delegate = self
         linksTableView.dataSource = self
         
+        
         downloadFeatureData()
         downloadLinksData()
     }
     
     func downloadFeatureData() {
-        let feature1 = HomeFeature(title: "Feature1", description: "This is a new feature", icon: UIImage(named: "ls-default news")!)
-        let feature2 = HomeFeature(title: "Feature2", description: "This is another new feature", icon: UIImage(named: "ls-default news")!)
-        let feature3 = HomeFeature(title: "Feature3", description: "This is another new feature", icon: UIImage(named: "ls-default news")!)
         
-        featureArray.append(feature1)
-        featureArray.append(feature2)
-        featureArray.append(feature3)
     }
     
     func downloadLinksData() {
