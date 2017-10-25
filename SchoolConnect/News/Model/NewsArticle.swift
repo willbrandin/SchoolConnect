@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NewsArticle {
+struct NewsArticle {
     
     var title: String!
     var subtitle: String!

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CalendarEvent {
+struct CalendarEvent {
     
     var title: String
     var startDate: String

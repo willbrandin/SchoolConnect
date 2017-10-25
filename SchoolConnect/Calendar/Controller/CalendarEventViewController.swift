@@ -16,7 +16,6 @@ class CalendarEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
     }
     
     func setupView() {
@@ -28,6 +27,7 @@ class CalendarEventViewController: UIViewController {
     @IBAction func didPressSaveToCalendar(_ sender: Any) {
         addEventToCalendar(title: calendarEvent.title, description: calendarEvent.description, startDate: dateChange(date: calendarEvent.startDate), endDate: dateChange(date: calendarEvent.endDate), location: calendarEvent.location)
     }
+    
     ///Takes the CalendarEvent Date as a string and converts it to a Date object.
     func dateChange(date: String) -> Date {
         let dateFormatter = DateFormatter()
@@ -65,6 +65,4 @@ class CalendarEventViewController: UIViewController {
     ///Will open the sharing window to offer sharing settings for FB, Twitter, etc.
     @IBAction func didPressShare(_ sender: Any) {
     }
-    
-    
 }

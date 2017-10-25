@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class PushNotif {
+
+struct PushNotif {
     let title: String!
     let message: String!
     

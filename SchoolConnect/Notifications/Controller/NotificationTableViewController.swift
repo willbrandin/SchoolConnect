@@ -70,3 +70,7 @@ class NotificationTableViewController: UITableViewController {
         }
     }
 }
+
+extension NotificationViewController {
+    
+}

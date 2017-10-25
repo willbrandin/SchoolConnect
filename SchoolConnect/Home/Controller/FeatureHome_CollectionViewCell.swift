@@ -22,6 +22,7 @@ class FeatureHomeCollectionViewCell: UICollectionViewCell {
         featureTitle.text = feature.title
         featureDescription.text = feature.description
     }
+    
     func updateCorner(){
         featureIcon.layer.cornerRadius = 8.0
         featureIcon.layer.masksToBounds = true

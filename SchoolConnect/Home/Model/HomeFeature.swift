@@ -20,22 +20,18 @@ struct HomeFeature {
         self.icon = icon
     }
     
-    enum CustomFeature {
-        case bullyReport
-        case principalContact
-        case newsSection
-        case calendarSection
-    }
     
-    static func returnFeature(feature: CustomFeature) -> [HomeFeature] {
-        var homeFeature = [HomeFeature]()
-        switch feature {
-        case .bullyReport: homeFeature.append(HomeFeature(title: "Bully Reporting", description: "Bullying is not tolerated here.", icon: #imageLiteral(resourceName: "ls-default news")))
-        case .principalContact: homeFeature.append(HomeFeature(title: "Email the Principal", description: "You deserve direct communication", icon: #imageLiteral(resourceName: "ls-default news")))
-        case .newsSection: homeFeature.append(HomeFeature(title: "News", description: "See the News Section", icon: #imageLiteral(resourceName: "ls-default news")))
-        case .calendarSection: homeFeature.append(HomeFeature(title: "Calendar", description: "See the Event Calendar!", icon: #imageLiteral(resourceName: "ls-default news")))
-        }
-        return homeFeature
+    
+    static func downloadFeaturesData() -> [HomeFeature] {
+        var features: [HomeFeature]
+    
+        let feature1 = HomeFeature(title: "Bully Reporting", description: "Bullying is not tolerated here.", icon: #imageLiteral(resourceName: "ls-default news"))
+        let feature2 = HomeFeature(title: "Email the Principal", description: "You deserve direct communication", icon: #imageLiteral(resourceName: "ls-default news"))
+        let feature3 = HomeFeature(title: "News", description: "See the News Section", icon: #imageLiteral(resourceName: "ls-default news"))
+        let feature4 = HomeFeature(title: "Calendar", description: "See the Event Calendar!", icon: #imageLiteral(resourceName: "ls-default news"))
+
+        features = [feature1, feature2, feature3, feature4]    
+        return features
     }
     
 }
