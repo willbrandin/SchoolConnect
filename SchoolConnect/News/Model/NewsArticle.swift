@@ -50,7 +50,5 @@ struct NewsArticle {
         self.imgUrl = imgUrl
         self.fullStory = story
     }
-    
-    
 }
 

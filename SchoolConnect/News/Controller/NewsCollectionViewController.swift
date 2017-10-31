@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
 private let reuseIdentifier = "NewsArticleCell"
 
@@ -16,7 +14,12 @@ class NewsCollectionViewController: UICollectionViewController {
     
     //MARK: Properties
     var newsArray = [NewsArticle]()
-
+    
+    //MARK: ViewController Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchNewsData()
+    }
 
     //MARK: Methods
     func fetchNewsData() {
@@ -63,10 +66,5 @@ class NewsCollectionViewController: UICollectionViewController {
             }
         }
     }
-    
-    //MARK: ViewController Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchNewsData()
-    }
+   
 }

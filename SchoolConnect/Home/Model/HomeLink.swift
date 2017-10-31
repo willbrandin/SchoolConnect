@@ -15,7 +15,7 @@ struct HomeLink {
     var linkURL: String
     
     //MARK: Methods
-    static func downloadLinksData(completion: @escaping [HomeLink] -> Void) {
+    static func downloadLinksData(completion: @escaping ([HomeLink]) -> Void) {
         var links = [HomeLink]()
         
         let link1 = HomeLink(title: "Link1", linkURL: "Link")

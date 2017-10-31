@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
 private let reuseIdentifier = "NotificationCell"
 

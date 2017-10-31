@@ -18,7 +18,7 @@ struct HomeFeature {
     
     
     static func downloadFeaturesData(completion: @escaping ([HomeFeature]) -> Void){
-        var features: [HomeFeature]
+        var features = [HomeFeature]()
     
         let feature1 = HomeFeature(title: "Bully Reporting", description: "Bullying is not tolerated here.", icon: #imageLiteral(resourceName: "ls-default news"))
         let feature2 = HomeFeature(title: "Email the Principal", description: "You deserve direct communication", icon: #imageLiteral(resourceName: "ls-default news"))

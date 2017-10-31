@@ -7,9 +7,26 @@
 //
 
 import Foundation
+import UIKit
 
-
+//Global constants
 let SCHOOL_NAME = "SchoolOfLife"
 let CALENDAR_EVENT = "CalendarEvents"
 let NEWS_ARTICLE = "News"
 let NOTIFICATIONS = "Notifications"
+
+
+//Extensions
+class NotifRoundedImage: UIImageView {
+    
+    override func layoutSubviews() {
+        updateCornerRadius()
+    }
+    func updateCornerRadius() {
+        self.layer.cornerRadius = 8.0
+        self.layer.masksToBounds = true
+    }
+    
+}
+
+
