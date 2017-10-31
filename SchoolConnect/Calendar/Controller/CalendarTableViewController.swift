@@ -14,34 +14,26 @@ private let reuseIdentifier = "CalendarCell"
 
 class CalendarTableViewController: UITableViewController {
  
+    //MARK: Properties
     var eventsArray = [CalendarEvent]()
     
+    //MARK: ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadEventData()
+        fetchEventData()
     }
     
-    /// 1.) Parses data for calendar event
-    /// 2.) Creates a new CalendarEvent Object
-    /// 3.) Appends the new object to the Events Array
-    func downloadEventData() {
-        //Firebase Reference
-        let ref = Database.database().reference()
-        let calendarEventRef = ref.child(SCHOOL_NAME).child(CALENDAR_EVENT)
-        calendarEventRef.observe(.childAdded) { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-                guard let title = dictionary["title"] as? String else { return }
-                guard let startDate = dictionary["startDate"] as? String else { return }
-                guard let endDate = dictionary["endDate"] as? String else { return }
-                guard let description = dictionary["description"] as? String else { return }
-                guard let location = dictionary["location"] as? String else { return }
-                let newEvent = CalendarEvent(title: title, startDate: startDate, endDate: endDate, description: description, location: location)
-                self.eventsArray.append(newEvent)
+    //MARK: Methods
+    func fetchEventData() {
+        CalendarEvent.downloadEventData { (event) in
+            self.eventsArray = event
+            DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
 
+    //MARK: Delegates
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,13 +49,13 @@ class CalendarTableViewController: UITableViewController {
             return UITableViewCell()
         }
     }
-    
-    //Sends TblVw Cell Data and sends it to the ViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var selectedEvent: CalendarEvent!
         selectedEvent = eventsArray[indexPath.row]
         self.performSegue(withIdentifier: "CalendarEventSegue", sender: selectedEvent)
     }
+    
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CalendarEventSegue" {
             if let eventDetailVC = segue.destination as? CalendarEventViewController {
@@ -73,4 +65,5 @@ class CalendarTableViewController: UITableViewController {
             }
         }
     }
+    
 }

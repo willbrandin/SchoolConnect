@@ -19,17 +19,19 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //MARK: Properties
     //Cell identifiers from Storyboards
     let featureCellIdentifier = "home-feature-cell"
     let linkCellIdentifier = "home-link-cell"
+    
     //Array to store the Home Features and the Links to the Internet
     //DataSource for Collection and TableView
     var featureArray = [HomeFeature]()
     var linksArray = [HomeLink]()
-    
     @IBOutlet weak var featureCollectionView: UICollectionView!
     @IBOutlet weak var linksTableView: UITableView!
     
+    //MARK: ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,18 +40,32 @@ class HomeViewController: UIViewController {
         linksTableView.delegate = self
         linksTableView.dataSource = self
         
-        getData()
+        fetchLinkData()
+        fetchFeatureData()
+    }
+
+    //MARK: Methods
+    func fetchLinkData() {
+        HomeLink.downloadLinksData { (link) in
+            self.linksArray = link
+            DispatchQueue.main.async {
+                self.linksTableView.reloadData()
+            }
+        }
     }
     
-    /// Assingns Data to the Arrays used for Collection and TableView DataSource's.
-    func getData() {
-        featureArray = HomeFeature.downloadFeaturesData()
-        linksArray = HomeLink.downloadLinksData()
+    func fetchFeatureData() {
+        HomeFeature.downloadFeaturesData { (feature) in
+            self.featureArray = feature
+            DispatchQueue.main.async {
+                self.featureCollectionView.reloadData()
+            }
+        }
     }
     
 }
 
-
+//MARK: Delegates
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,11 +83,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
-    
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
 }
+
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 

@@ -14,32 +14,22 @@ private let reuseIdentifier = "NewsArticleCell"
 
 class NewsCollectionViewController: UICollectionViewController {
     
+    //MARK: Properties
     var newsArray = [NewsArticle]()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        downloadNewsData()
-    }
-    
-    func downloadNewsData() {
+
+    //MARK: Methods
+    func fetchNewsData() {
         
-        let ref = Database.database().reference()
-        let newsRef = ref.child(SCHOOL_NAME).child(NEWS_ARTICLE)
-        newsRef.observe(.childAdded) { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-                guard let title = dictionary["title"] as? String else { return }
-                guard let subtitle = dictionary["subtitle"] as? String else { return }
-                guard let date = dictionary["pubDate"] as? String else { return }
-                guard let source = dictionary["source"] as? String else { return }
-                guard let imgUrl = dictionary["imgUrl"] as? String else { return }
-                guard let story = dictionary["story"] as? String else { return }
-                let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: date, source: source, imgUrl: imgUrl, story: story)
-                self.newsArray.append(newArticle)
+        NewsArticle.downloadNewsData(completion: ({ (stories) in
+            self.newsArray = stories
+            DispatchQueue.main.async {
                 self.collectionView?.reloadData()
             }
-        }
+        }))
     }
 
+    //MARK: Delegates
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -57,13 +47,13 @@ class NewsCollectionViewController: UICollectionViewController {
         }
     }
     
-    //Sends Cell information to be accessed in the View Controller
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var selectedArticle: NewsArticle!
         selectedArticle = newsArray[indexPath.row]
         performSegue(withIdentifier: "NewsArticleSegue", sender: selectedArticle)
     }
     
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NewsArticleSegue" {
             if let newsArticleDetailVC = segue.destination as? NewsArticleViewController {
@@ -72,5 +62,11 @@ class NewsCollectionViewController: UICollectionViewController {
                 }
             }
         }
+    }
+    
+    //MARK: ViewController Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchNewsData()
     }
 }

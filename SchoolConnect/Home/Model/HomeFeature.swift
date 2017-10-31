@@ -10,19 +10,14 @@ import Foundation
 import UIKit
 
 struct HomeFeature {
+    
+    //MARK: Properties
     var title: String
     var description: String
     var icon: UIImage
     
-    init(title: String, description: String, icon: UIImage) {
-        self.title = title
-        self.description = description
-        self.icon = icon
-    }
     
-    
-    
-    static func downloadFeaturesData() -> [HomeFeature] {
+    static func downloadFeaturesData(completion: @escaping ([HomeFeature]) -> Void){
         var features: [HomeFeature]
     
         let feature1 = HomeFeature(title: "Bully Reporting", description: "Bullying is not tolerated here.", icon: #imageLiteral(resourceName: "ls-default news"))
@@ -30,10 +25,16 @@ struct HomeFeature {
         let feature3 = HomeFeature(title: "News", description: "See the News Section", icon: #imageLiteral(resourceName: "ls-default news"))
         let feature4 = HomeFeature(title: "Calendar", description: "See the Event Calendar!", icon: #imageLiteral(resourceName: "ls-default news"))
 
-        features = [feature1, feature2, feature3, feature4]    
-        return features
+        features = [feature1, feature2, feature3, feature4]
+        completion(features)
     }
     
+    //MARK: Inits
+    init(title: String, description: String, icon: UIImage) {
+        self.title = title
+        self.description = description
+        self.icon = icon
+    }
 }
 
 

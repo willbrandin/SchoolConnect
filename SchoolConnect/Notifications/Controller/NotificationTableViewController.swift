@@ -14,29 +14,27 @@ private let reuseIdentifier = "NotificationCell"
 
 class NotificationTableViewController: UITableViewController {
 
-    
+    //MARK: Properties
     var notificationArray = [PushNotif]()
     
+    //MARK: ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadPushNotificationData()
+        fetchNotificationData()
     }
-
-    func downloadPushNotificationData() {
-        
-        let ref = Database.database().reference()
-        let notificationRef = ref.child(SCHOOL_NAME).child(NOTIFICATIONS)
-        notificationRef.observe(.childAdded) { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-                guard let title = dictionary["title"] as? String else { return }
-                guard let message = dictionary["message"] as? String else { return }
-                let newNotification = PushNotif(title: title, message: message)
-                self.notificationArray.append(newNotification)
+    
+    //MARK: Methods
+    func fetchNotificationData(){
+        PushNotif.downloadPushNotificationData { (notification) in
+            self.notificationArray = notification
+            DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
+
     
+    //MARK: Delegates
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -60,6 +58,7 @@ class NotificationTableViewController: UITableViewController {
         performSegue(withIdentifier: "didClickNotification", sender: selectedNotification)
     }
     
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "didClickNotification" {
             if let notifDetailVC = segue.destination as? NotificationViewController {
@@ -71,6 +70,3 @@ class NotificationTableViewController: UITableViewController {
     }
 }
 
-extension NotificationViewController {
-    
-}

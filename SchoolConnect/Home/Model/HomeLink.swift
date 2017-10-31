@@ -9,16 +9,13 @@
 import Foundation
 
 struct HomeLink {
+    
+    //MARK: Properties
     var title: String
     var linkURL: String
     
-    init(title: String, linkURL: String) {
-        self.title = title
-        self.linkURL = linkURL
-    }
-    
-    
-    static func downloadLinksData() -> [HomeLink] {
+    //MARK: Methods
+    static func downloadLinksData(completion: @escaping [HomeLink] -> Void) {
         var links = [HomeLink]()
         
         let link1 = HomeLink(title: "Link1", linkURL: "Link")
@@ -26,7 +23,13 @@ struct HomeLink {
         let link3 = HomeLink(title: "Link3", linkURL: "Link")
         
         links = [link1, link2, link3]
-        return links
+        completion(links)
+    }
+    
+    //MARK: Inits
+    init(title: String, linkURL: String) {
+        self.title = title
+        self.linkURL = linkURL
     }
     
 }
