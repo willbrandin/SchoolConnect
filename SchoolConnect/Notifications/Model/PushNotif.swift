@@ -21,7 +21,7 @@ struct PushNotif {
         var notificationArray = [PushNotif]()
         
         let ref = Database.database().reference()
-        let notificationRef = ref.child(SCHOOL_NAME).child(NOTIFICATIONS)
+        let notificationRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.NOTIFICATIONS)
         notificationRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }

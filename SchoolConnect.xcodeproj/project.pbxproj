@@ -30,7 +30,7 @@
 		03C2CF451F79E48700A6E07C /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */; };
 		03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */; };
 		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
-		03E37E051FA566E100915E10 /* SchoolConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E37E041FA566E100915E10 /* SchoolConnectTests.swift */; };
+		03E37E051FA566E100915E10 /* SchoolConnectHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */; };
 		03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */; };
 		03F2C6DE1F8BD3CA007F295E /* Link_homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */; };
 		03F2C6E11F8BD464007F295E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6E01F8BD464007F295E /* HomeFeature.swift */; };
@@ -75,7 +75,7 @@
 		03DD738E1F70926500F09808 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03DD738F1F70929B00F09808 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		03E37E021FA566E100915E10 /* SchoolConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E37E041FA566E100915E10 /* SchoolConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolConnectTests.swift; sourceTree = "<group>"; };
+		03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolConnectHomeTests.swift; sourceTree = "<group>"; };
 		03E37E061FA566E100915E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHome_CollectionViewCell.swift; sourceTree = "<group>"; };
 		03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link_homeTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				03C2CF3F1F79E31700A6E07C /* Controller */,
-				03C2CF3E1F79E31300A6E07C /* View */,
 				03C2CF3D1F79E30E00A6E07C /* Model */,
 			);
 			path = Notifications;
@@ -223,13 +222,6 @@
 				03C2CF401F79E34600A6E07C /* PushNotif.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		03C2CF3E1F79E31300A6E07C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		03C2CF3F1F79E31700A6E07C /* Controller */ = {
@@ -282,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				0311910D1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift */,
-				03E37E041FA566E100915E10 /* SchoolConnectTests.swift */,
+				03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */,
 				03E37E061FA566E100915E10 /* Info.plist */,
 			);
 			path = SchoolConnectTests;
@@ -498,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E37E051FA566E100915E10 /* SchoolConnectTests.swift in Sources */,
+				03E37E051FA566E100915E10 /* SchoolConnectHomeTests.swift in Sources */,
 				0311910E1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,19 +8,31 @@
 
 import XCTest
 @testable import SchoolConnect
-import FirebaseDatabase
 
 class SchoolConnectNewsTests: XCTestCase {
     
-    func testCorrectHeadline() {
-
-        let newsArticle = NewsArticle(title: "New Boys Event", subtitle: "Event", pubDate: "11/16/17")
-        XCTAssertTrue(newsArticle.title == "New Boys Event")
+    
+    func testDownloadedDataNotNil() {
+        
+        NewsArticle.downloadNewsData { (articles) in
+            
+            XCTAssertNotNil(articles)
+        }
+    }
+    
+    func testArticlesNotNil() {
+        NewsArticle.downloadNewsData { (articles) in
+            XCTAssertNil(articles)
+        }
     }
     
     func testCorrectFromDownload(){
-       
+        let newArticleTitle = "Life School announces new donor program"
+        NewsArticle.downloadNewsData { (articles) in
+            let article = articles[1]
+            //This is where I use the data
+            XCTAssertTrue(newArticleTitle == article.subtitle)
+        }
     }
-    
     
 }

@@ -24,7 +24,7 @@ struct CalendarEvent {
         var eventsArray = [CalendarEvent]()
         //Firebase Reference
         let ref = Database.database().reference()
-        let calendarEventRef = ref.child(SCHOOL_NAME).child(CALENDAR_EVENT)
+        let calendarEventRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.CALENDAR_EVENT)
         calendarEventRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }

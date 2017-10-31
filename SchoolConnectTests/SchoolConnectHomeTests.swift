@@ -12,7 +12,17 @@ import XCTest
 class SchoolConnectHomeTests: XCTestCase {
     
     func testCorrectLinkOpensBasedOnCorrectInput(){
-        
+        let linkTitle = "Link3"
+        HomeLink.downloadLinksData { (links) in
+            let link3 = links[2]
+            XCTAssertTrue(linkTitle == link3.title)
+        }
+    }
+    
+    func testHomeLinksAreNotNil() {
+        HomeLink.downloadLinksData { (links) in
+            XCTAssertNotNil(links)
+        }
     }
     
     

@@ -21,8 +21,8 @@ class HomeViewController: UIViewController {
     
     //MARK: Properties
     //Cell identifiers from Storyboards
-    let featureCellIdentifier = "home-feature-cell"
-    let linkCellIdentifier = "home-link-cell"
+    private let featureCellIdentifier = "home-feature-cell"
+    private let linkCellIdentifier = "home-link-cell"
     
     //Array to store the Home Features and the Links to the Internet
     //DataSource for Collection and TableView
