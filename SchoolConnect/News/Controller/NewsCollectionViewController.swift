@@ -26,6 +26,7 @@ class NewsCollectionViewController: UICollectionViewController {
         
         NewsArticle.downloadNewsData(completion: ({ (stories) in
             self.newsArray = stories
+            self.newsArray.sort(by: { $0.pubDate.timeIntervalSinceNow > $1.pubDate.timeIntervalSinceNow })
             DispatchQueue.main.async {
                 self.collectionView?.reloadData()
             }

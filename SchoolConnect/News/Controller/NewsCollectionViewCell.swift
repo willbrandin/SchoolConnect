@@ -22,7 +22,11 @@ class NewsCollectionViewCell: UICollectionViewCell {
     func configureCell(news: NewsArticle) {
         titleLabel.text = news.title
         subtitleLabel.text = news.subtitle
-        pubDateLabel.text = news.pubDate
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        let stringDate: String = formatter.string(from: news.pubDate)
+        pubDateLabel.text = stringDate
     }
     
     func makeShadow() {

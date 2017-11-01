@@ -13,12 +13,14 @@ import UIKit
 
 //Global Constants
 ///Used for Database Reference's/Child Names for Firebase
-//
+
 struct GlobalVariables {
     static let SCHOOL_NAME = "SchoolOfLife"
     static let CALENDAR_EVENT = "CalendarEvents"
     static let NEWS_ARTICLE = "News"
     static let NOTIFICATIONS = "Notifications"
+    static let DEFAULT_IMG_URL = "gs://schoolconnect-willbrandin.appspot.com/SchoolOfLifeAssets/NewsPictures/ShowImage.jpeg"
+    
 }
 
 //Extensions

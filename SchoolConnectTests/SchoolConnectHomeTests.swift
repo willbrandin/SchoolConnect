@@ -11,19 +11,39 @@ import XCTest
 
 class SchoolConnectHomeTests: XCTestCase {
     
+    var homeLinks: [HomeLink]?
+    var done = false
+    
+    override func setUp() {
+        HomeLink.downloadLinksData { (links) in
+            self.homeLinks = links
+            self.done = true
+        }
+        waitUntil(timeout: 5) { done }
+    }
+    
+    
+    override func tearDown() {
+        homeLinks = nil
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
     func testCorrectLinkOpensBasedOnCorrectInput(){
         let linkTitle = "Link3"
-        HomeLink.downloadLinksData { (links) in
-            let link3 = links[2]
-            XCTAssertTrue(linkTitle == link3.title)
-        }
+        XCTAssertTrue(linkTitle == self.homeLinks![2].title, "The Title is not correct")
     }
     
     func testHomeLinksAreNotNil() {
-        HomeLink.downloadLinksData { (links) in
-            XCTAssertNotNil(links)
-        }
+        XCTAssertNotNil(self.homeLinks)
     }
     
+    func waitUntil(timeout: TimeInterval, predicate:(() -> Bool)) {
+        let timeoutTime = NSDate(timeIntervalSinceNow: timeout).timeIntervalSinceReferenceDate
+        
+        while (!predicate() && NSDate.timeIntervalSinceReferenceDate < timeoutTime) {
+            RunLoop.current.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.25) as Date)
+        }
+    }
     
 }

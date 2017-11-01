@@ -14,7 +14,6 @@
 		030964D21F701EC800109AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030964D01F701EC800109AF0 /* LaunchScreen.storyboard */; };
 		03100A861F79F0A500CF5DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */; };
 		0311491B1F85CE8D00FB349E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311491A1F85CE8D00FB349E /* HomeViewController.swift */; };
-		0311910E1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311910D1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift */; };
 		0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */; };
 		0342EEC91F7AC05400305680 /* helper-files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEC81F7AC05400305680 /* helper-files.swift */; };
 		037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */; };
@@ -31,6 +30,7 @@
 		03C2CF471F79E5AB00A6E07C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF461F79E5AB00A6E07C /* NotificationViewController.swift */; };
 		03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738F1F70929B00F09808 /* CalendarEvent.swift */; };
 		03E37E051FA566E100915E10 /* SchoolConnectHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */; };
+		03E4D7E41FA920D9008FAB34 /* SchoolConnectNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4D7E31FA920D9008FAB34 /* SchoolConnectNewsTests.swift */; };
 		03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */; };
 		03F2C6DE1F8BD3CA007F295E /* Link_homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */; };
 		03F2C6E11F8BD464007F295E /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2C6E01F8BD464007F295E /* HomeFeature.swift */; };
@@ -58,7 +58,6 @@
 		030964D31F701EC800109AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0311491A1F85CE8D00FB349E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0311910D1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolConnectNewsTests.swift; sourceTree = "<group>"; };
 		0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventViewController.swift; sourceTree = "<group>"; };
 		0342EEC81F7AC05400305680 /* helper-files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "helper-files.swift"; sourceTree = "<group>"; };
 		03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		03E37E021FA566E100915E10 /* SchoolConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolConnectHomeTests.swift; sourceTree = "<group>"; };
 		03E37E061FA566E100915E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E4D7E31FA920D9008FAB34 /* SchoolConnectNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolConnectNewsTests.swift; sourceTree = "<group>"; };
 		03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHome_CollectionViewCell.swift; sourceTree = "<group>"; };
 		03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link_homeTableViewCell.swift; sourceTree = "<group>"; };
 		03F2C6E01F8BD464007F295E /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 		03E37E031FA566E100915E10 /* SchoolConnectTests */ = {
 			isa = PBXGroup;
 			children = (
-				0311910D1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift */,
+				03E4D7E31FA920D9008FAB34 /* SchoolConnectNewsTests.swift */,
 				03E37E041FA566E100915E10 /* SchoolConnectHomeTests.swift */,
 				03E37E061FA566E100915E10 /* Info.plist */,
 			);
@@ -491,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E37E051FA566E100915E10 /* SchoolConnectHomeTests.swift in Sources */,
-				0311910E1FA6AB66001DB4BF /* SchoolConnectNewsTests.swift in Sources */,
+				03E4D7E41FA920D9008FAB34 /* SchoolConnectNewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				DEVELOPMENT_TEAM = M5QM989GLQ;
 				INFOPLIST_FILE = SchoolConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.SchoolConnect;
@@ -654,7 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				DEVELOPMENT_TEAM = M5QM989GLQ;
 				INFOPLIST_FILE = SchoolConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.SchoolConnect;
