@@ -28,8 +28,12 @@ class HomeViewController: UIViewController {
     //DataSource for Collection and TableView
     var featureArray = [HomeFeature]()
     var linksArray = [HomeLink]()
+    
+    //MARK: Outlets
     @IBOutlet weak var featureCollectionView: UICollectionView!
     @IBOutlet weak var linksTableView: UITableView!
+    @IBOutlet weak var heroDateLable: UILabel!
+    
     
     //MARK: ViewController Life Cycle
     override func viewDidLoad() {
@@ -42,6 +46,7 @@ class HomeViewController: UIViewController {
         
         fetchLinkData()
         fetchFeatureData()
+        heroDisplayDate()
     }
 
     //MARK: Methods
@@ -61,6 +66,13 @@ class HomeViewController: UIViewController {
                 self.featureCollectionView.reloadData()
             }
         }
+    }
+    
+    func heroDisplayDate() {
+        let timestamp = DateFormatter.localizedString(from: Date() as Date, dateStyle: .short, timeStyle: .none)
+        heroDateLable.text = "Today's Date: \(timestamp)"
+        
+     // Prints "Sep 9, 2014, 4:30 AM"
     }
     
 }

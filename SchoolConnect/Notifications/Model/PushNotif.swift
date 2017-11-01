@@ -14,6 +14,7 @@ struct PushNotif {
     //MARK: Properties
     let title: String!
     let message: String!
+    let timestamp: Date!
     
     //MARK: Methods
     static func downloadPushNotificationData(completion: @escaping ([PushNotif]) -> Void) {
@@ -26,7 +27,10 @@ struct PushNotif {
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
                 guard let message = dictionary["message"] as? String else { return }
-                let newNotification = PushNotif(title: title, message: message)
+                guard let downloadedTimestamp = dictionary["timestamp"] as? String else { return }
+                guard let timestamp = Date.date(fromString: downloadedTimestamp) else { return }
+                
+                let newNotification = PushNotif(title: title, message: message, timestamp: timestamp)
                 notificationArray.append(newNotification)
                 completion(notificationArray)
             }
@@ -34,9 +38,10 @@ struct PushNotif {
     }
     
     //MARK: Inits
-    init(title: String, message: String) {
+    init(title: String, message: String, timestamp: Date) {
         self.title = title
         self.message = message
+        self.timestamp = timestamp
     }
 }
 

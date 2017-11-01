@@ -26,6 +26,7 @@ class CalendarTableViewController: UITableViewController {
     func fetchEventData() {
         CalendarEvent.downloadEventData { (event) in
             self.eventsArray = event
+            self.eventsArray.sort(by: { $0.startDate.timeIntervalSinceNow < $1.startDate.timeIntervalSinceNow })
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

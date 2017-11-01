@@ -15,6 +15,7 @@ class CalendarView: UIView {
         makeShadow()
     }
 
+    //MARK: Methods
     func updateCornerRadius() {
         self.layer.cornerRadius = 15.0
         self.layer.masksToBounds = false

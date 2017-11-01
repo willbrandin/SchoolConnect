@@ -25,6 +25,7 @@ class NotificationTableViewController: UITableViewController {
     func fetchNotificationData(){
         PushNotif.downloadPushNotificationData { (notification) in
             self.notificationArray = notification
+            self.notificationArray.sort(by: {$0.timestamp.timeIntervalSinceNow > $1.timestamp.timeIntervalSinceNow})
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

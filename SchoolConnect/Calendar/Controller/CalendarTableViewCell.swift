@@ -18,9 +18,8 @@ class CalendarTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ event: CalendarEvent) {
-        
         self.title.text = event.title
-        self.date.text = event.startDate
+        self.date.text = Date.string(fromDate: event.startDate)
     }
     
 

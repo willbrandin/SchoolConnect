@@ -10,23 +10,17 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
+    //MARK: Properties
     @IBOutlet weak var pubDateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var newsArticlePhoto: UIImageView!
     
-    override func layoutSubviews() {
-        makeShadow()
-    }
-    
+    //MARK: Methods
     func configureCell(news: NewsArticle) {
         titleLabel.text = news.title
         subtitleLabel.text = news.subtitle
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        let stringDate: String = formatter.string(from: news.pubDate)
-        pubDateLabel.text = stringDate
+        pubDateLabel.text = Date.string(fromDate: news.pubDate)
     }
     
     func makeShadow() {
@@ -34,5 +28,10 @@ class NewsCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize(width: 0, height: 10)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 15.0
+    }
+    
+    //MARK: Life Cycle
+    override func layoutSubviews() {
+        makeShadow()
     }
 }

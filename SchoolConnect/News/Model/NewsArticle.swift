@@ -29,19 +29,9 @@ struct NewsArticle {
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
                 guard let subtitle = dictionary["subtitle"] as? String else { return }
-                guard let date = dictionary["pubDate"] as? String else { return }
                 
-                //Gets Date as a String
-                //Sets as NSDate
-                let dateFormatter = DateFormatter()
-                dateFormatter.locale = Locale.current
-                dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
-                let dateFromString = dateFormatter.date(from: date)
-                
-                print(dateFromString!)
-                
-                
-                guard let pubDate = dateFromString else { return }
+                guard let downloadDate = dictionary["pubDate"] as? String else { return }
+                guard let pubDate = Date.date(fromString: downloadDate) else { return }
                 
                 guard let source = dictionary["source"] as? String else { return }
                 guard let story = dictionary["story"] as? String else { return }

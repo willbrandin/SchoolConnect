@@ -42,4 +42,31 @@ extension UIColor{
     }
 }
 
+extension Date {
+    static func date(fromString: String) -> Date? {
+        //Gets Date as a String
+        //Sets as NSDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+        let dateFromString = dateFormatter.date(from: fromString)
+        return dateFromString
+    }
+    static func string(fromDate: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        let stringFromDate: String = formatter.string(from: fromDate)
+        return stringFromDate
+    }
+}
+
+
+
+
+
+
+
+
+
+
 

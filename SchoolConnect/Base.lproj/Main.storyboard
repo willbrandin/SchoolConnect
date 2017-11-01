@@ -281,6 +281,7 @@
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="featureCollectionView" destination="GRa-cH-Aa6" id="nuN-yM-rMG"/>
+                        <outlet property="heroDateLable" destination="rn5-Hz-iab" id="E4t-gu-VT7"/>
                         <outlet property="linksTableView" destination="57l-IO-2wr" id="4kb-Qz-dUI"/>
                     </connections>
                 </viewController>

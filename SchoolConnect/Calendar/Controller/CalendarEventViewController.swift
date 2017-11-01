@@ -11,13 +11,16 @@ import EventKit
 
 class CalendarEventViewController: UIViewController {
 
+    //MARK: Properties
     var calendarEvent: CalendarEvent!
     
+    //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
+    //MARK: Methods
     func setupView() {
         self.title = calendarEvent.title
     }
@@ -25,15 +28,7 @@ class CalendarEventViewController: UIViewController {
     /// When User pushes Save to Calendar it calls the addEventtoCal Method
     /// Method takes in the title, start and end date, and location.
     @IBAction func didPressSaveToCalendar(_ sender: Any) {
-        addEventToCalendar(title: calendarEvent.title, description: calendarEvent.description, startDate: dateChange(date: calendarEvent.startDate), endDate: dateChange(date: calendarEvent.endDate), location: calendarEvent.location)
-    }
-    
-    ///Takes the CalendarEvent Date as a string and converts it to a Date object.
-    func dateChange(date: String) -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        let date = dateFormatter.date(from: date)
-        return date!
+        addEventToCalendar(title: calendarEvent.title, description: calendarEvent.description, startDate: calendarEvent.startDate, endDate: calendarEvent.endDate, location: calendarEvent.location)
     }
     
     ///Adds the ability to add event to the user calendar as an event.

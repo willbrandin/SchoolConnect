@@ -13,8 +13,8 @@ struct CalendarEvent {
     
     //MARK: Properties
     var title: String
-    var startDate: String
-    var endDate: String
+    var startDate: Date
+    var endDate: Date
     var description: String
     var location: String
     
@@ -28,8 +28,12 @@ struct CalendarEvent {
         calendarEventRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
-                guard let startDate = dictionary["startDate"] as? String else { return }
-                guard let endDate = dictionary["endDate"] as? String else { return }
+                guard let downloadedStartDate = dictionary["startDate"] as? String else { return }
+                guard let startDate = Date.date(fromString: downloadedStartDate) else { return }
+                
+                guard let downloadedEndDate = dictionary["endDate"] as? String else { return }
+                guard let endDate = Date.date(fromString: downloadedEndDate) else { return }
+                
                 guard let description = dictionary["description"] as? String else { return }
                 guard let location = dictionary["location"] as? String else { return }
                 let newEvent = CalendarEvent(title: title, startDate: startDate, endDate: endDate, description: description, location: location)
@@ -40,7 +44,7 @@ struct CalendarEvent {
     }
     
     //MARK: Inits
-    init(title: String, startDate: String, endDate: String, description: String, location: String) {
+    init(title: String, startDate: Date, endDate: Date, description: String, location: String) {
         self.title = title
         self.startDate = startDate
         self.endDate = endDate

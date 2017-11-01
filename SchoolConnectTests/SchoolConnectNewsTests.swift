@@ -53,6 +53,7 @@ class SchoolConnectNewsTests: XCTestCase {
     }
     
     
+    
     func waitUntil(timeout: TimeInterval, predicate:(() -> Bool)) {
         let timeoutTime = NSDate(timeIntervalSinceNow: timeout).timeIntervalSinceReferenceDate
         
