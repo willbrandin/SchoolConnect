@@ -12,11 +12,11 @@ import FirebaseDatabase
 struct CalendarEvent {
     
     //MARK: Properties
-    var title: String
-    var startDate: Date
-    var endDate: Date
-    var description: String
-    var location: String
+    var title: String!
+    var startDate: Date!
+    var endDate: Date!
+    var description: String!
+    var location: String!
     
     
     //MARK: Methods

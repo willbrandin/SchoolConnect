@@ -8,32 +8,59 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 struct HomeFeature {
     
     //MARK: Properties
     var title: String
+    var featureType: String
     var description: String
     var icon: UIImage
+    var isChosen: Bool
     
-    
+    //MARK: Methods
     static func downloadFeaturesData(completion: @escaping ([HomeFeature]) -> Void){
         var features = [HomeFeature]()
+        
+        let ref = Database.database().reference()
+        let featureRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.FEATURES)
+        featureRef.observe(.childAdded) { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                guard let title = dictionary["title"] as? String else { return }
+                guard let type = dictionary["type"] as? String else { return }
+                guard let description = dictionary["description"] as? String else { return }
+                guard let isSelected = dictionary["isSelected"] as? Bool else { return }
+                let newFeature = HomeFeature(title: title, featureType: type, description: description, icon: #imageLiteral(resourceName: "ls-default news"), isChosen: isSelected)
+                features.append(newFeature)
+                completion(removeNonSelectedFeatures(from: features))
+            }
+        }
+    }
     
-        let feature1 = HomeFeature(title: "Bully Reporting", description: "Bullying is not tolerated here.", icon: #imageLiteral(resourceName: "ls-default news"))
-        let feature2 = HomeFeature(title: "Email the Principal", description: "You deserve direct communication", icon: #imageLiteral(resourceName: "ls-default news"))
-        let feature3 = HomeFeature(title: "News", description: "See the News Section", icon: #imageLiteral(resourceName: "ls-default news"))
-        let feature4 = HomeFeature(title: "Calendar", description: "See the Event Calendar!", icon: #imageLiteral(resourceName: "ls-default news"))
-
-        features = [feature1, feature2, feature3, feature4]
-        completion(features)
+    static func didClickFeature(_ feature: HomeFeature) -> String {
+        switch feature.featureType {
+        case "bullyReporting":
+            return "bully-report"
+        case "contactTeacher":
+            return "contact-teacher"
+        default:
+            return "error"
+        }
+    }
+    
+    static func removeNonSelectedFeatures(from features: [HomeFeature]) -> [HomeFeature] {
+        let trueValues = features.filter({$0.isChosen == true})
+        return trueValues
     }
     
     //MARK: Inits
-    init(title: String, description: String, icon: UIImage) {
+    init(title: String, featureType: String, description: String, icon: UIImage, isChosen: Bool) {
         self.title = title
+        self.featureType = featureType
         self.description = description
         self.icon = icon
+        self.isChosen = isChosen
     }
 }
 

@@ -20,7 +20,16 @@ struct GlobalVariables {
     static let NEWS_ARTICLE = "News"
     static let NOTIFICATIONS = "Notifications"
     static let DEFAULT_IMG_URL = "gs://schoolconnect-willbrandin.appspot.com/SchoolOfLifeAssets/NewsPictures/ShowImage.jpeg"
-    
+    static let FEATURES = "Features"
+}
+
+//Enums
+enum Feature {
+    case bullyReporting
+    case calendar
+    case newsArticle
+    case contactPrincipal
+    case contactTeacher
 }
 
 //Extensions

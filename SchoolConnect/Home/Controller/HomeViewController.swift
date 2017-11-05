@@ -60,8 +60,9 @@ class HomeViewController: UIViewController {
     }
     
     func fetchFeatureData() {
-        HomeFeature.downloadFeaturesData { (feature) in
-            self.featureArray = feature
+        HomeFeature.downloadFeaturesData { (features) in
+            print("WILL: \(features)")
+            self.featureArray = features
             DispatchQueue.main.async {
                 self.featureCollectionView.reloadData()
             }
@@ -71,8 +72,6 @@ class HomeViewController: UIViewController {
     func heroDisplayDate() {
         let timestamp = DateFormatter.localizedString(from: Date() as Date, dateStyle: .short, timeStyle: .none)
         heroDateLable.text = "Today's Date: \(timestamp)"
-        
-     // Prints "Sep 9, 2014, 4:30 AM"
     }
     
 }
@@ -94,6 +93,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var selectedFeature: HomeFeature!
+        selectedFeature = featureArray[indexPath.row]
+        let id = HomeFeature.didClickFeature(selectedFeature)
+        performSegue(withIdentifier: id, sender: selectedFeature)
     }
     //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

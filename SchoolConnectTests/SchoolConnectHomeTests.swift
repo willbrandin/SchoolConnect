@@ -12,19 +12,27 @@ import XCTest
 class SchoolConnectHomeTests: XCTestCase {
     
     var homeLinks: [HomeLink]?
+    var homeFeature: [HomeFeature]?
     var done = false
     
     override func setUp() {
         HomeLink.downloadLinksData { (links) in
             self.homeLinks = links
+            //self.done = true
+        }
+        
+        HomeFeature.downloadFeaturesData { (features) in
+            self.homeFeature = features
             self.done = true
         }
+        
         waitUntil(timeout: 5) { done }
     }
     
     
     override func tearDown() {
         homeLinks = nil
+        homeFeature = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
