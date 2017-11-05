@@ -24,13 +24,7 @@ struct GlobalVariables {
 }
 
 //Enums
-enum Feature {
-    case bullyReporting
-    case calendar
-    case newsArticle
-    case contactPrincipal
-    case contactTeacher
-}
+
 
 //Extensions
 class NotifRoundedImage: UIImageView {

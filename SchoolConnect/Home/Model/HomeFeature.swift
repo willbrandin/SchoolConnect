@@ -38,16 +38,7 @@ struct HomeFeature {
         }
     }
     
-    static func didClickFeature(_ feature: HomeFeature) -> String {
-        switch feature.featureType {
-        case "bullyReporting":
-            return "bully-report"
-        case "contactTeacher":
-            return "contact-teacher"
-        default:
-            return "error"
-        }
-    }
+  
     
     static func removeNonSelectedFeatures(from features: [HomeFeature]) -> [HomeFeature] {
         let trueValues = features.filter({$0.isChosen == true})

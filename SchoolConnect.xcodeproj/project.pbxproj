@@ -15,6 +15,8 @@
 		03100A861F79F0A500CF5DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */; };
 		0311491B1F85CE8D00FB349E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311491A1F85CE8D00FB349E /* HomeViewController.swift */; };
 		0326900B1F70A93600BFEC90 /* CalendarEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */; };
+		0328AF141FAF9A1600616FB0 /* ContactTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AF131FAF9A1600616FB0 /* ContactTeacherVC.swift */; };
+		0328AF161FAF9D0500616FB0 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AF151FAF9D0500616FB0 /* Employee.swift */; };
 		0342EEC91F7AC05400305680 /* helper-files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342EEC81F7AC05400305680 /* helper-files.swift */; };
 		037BD8D11F7094A500B4E8DD /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738A1F70926500F09808 /* CalendarTableViewCell.swift */; };
 		037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD738B1F70926500F09808 /* CalendarTableViewController.swift */; };
@@ -59,6 +61,8 @@
 		03100A851F79F09700CF5DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0311491A1F85CE8D00FB349E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0326900A1F70A93600BFEC90 /* CalendarEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventViewController.swift; sourceTree = "<group>"; };
+		0328AF131FAF9A1600616FB0 /* ContactTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactTeacherVC.swift; path = ../../../../../../../../../../Documents/ContactTeacherVC.swift; sourceTree = "<group>"; };
+		0328AF151FAF9D0500616FB0 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = ../../../../../../../../../../Documents/Employee.swift; sourceTree = "<group>"; };
 		0342EEC81F7AC05400305680 /* helper-files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "helper-files.swift"; sourceTree = "<group>"; };
 		03A2F59E1F70293500B8C78E /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
 		03A2F5A01F70296A00B8C78E /* NewsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		030964C31F701EC800109AF0 /* SchoolConnect */ = {
 			isa = PBXGroup;
 			children = (
+				0328AF0E1FAF99C100616FB0 /* Features */,
 				0310D54F1F846D2000DCE041 /* Home */,
 				030964DC1F701F2A00109AF0 /* Singles */,
 				03C2CF3C1F79E30200A6E07C /* Notifications */,
@@ -193,6 +198,47 @@
 				0311491A1F85CE8D00FB349E /* HomeViewController.swift */,
 				03F2C6DB1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift */,
 				03F2C6DD1F8BD3CA007F295E /* Link_homeTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0328AF0E1FAF99C100616FB0 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0328AF0F1FAF99CA00616FB0 /* ContactTeacher */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0328AF0F1FAF99CA00616FB0 /* ContactTeacher */ = {
+			isa = PBXGroup;
+			children = (
+				0328AF121FAF99E600616FB0 /* Controller */,
+				0328AF111FAF99E200616FB0 /* View */,
+				0328AF101FAF99D900616FB0 /* Model */,
+			);
+			path = ContactTeacher;
+			sourceTree = "<group>";
+		};
+		0328AF101FAF99D900616FB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0328AF151FAF9D0500616FB0 /* Employee.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0328AF111FAF99E200616FB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0328AF121FAF99E600616FB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0328AF131FAF9A1600616FB0 /* ContactTeacherVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -468,6 +514,7 @@
 				03C2CF431F79E40600A6E07C /* NotificationTableViewController.swift in Sources */,
 				037BD8D21F7094A700B4E8DD /* CalendarTableViewController.swift in Sources */,
 				03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */,
+				0328AF141FAF9A1600616FB0 /* ContactTeacherVC.swift in Sources */,
 				03DD73901F70929B00F09808 /* CalendarEvent.swift in Sources */,
 				03F2C6DE1F8BD3CA007F295E /* Link_homeTableViewCell.swift in Sources */,
 				03F2C6E31F8BDF7D007F295E /* HomeLink.swift in Sources */,
@@ -475,6 +522,7 @@
 				03A2F5A11F70296A00B8C78E /* NewsCollectionViewController.swift in Sources */,
 				03A2F59F1F70293500B8C78E /* NewsArticleViewController.swift in Sources */,
 				03F2C6E11F8BD464007F295E /* HomeFeature.swift in Sources */,
+				0328AF161FAF9D0500616FB0 /* Employee.swift in Sources */,
 				0342EEC91F7AC05400305680 /* helper-files.swift in Sources */,
 				03C2CF411F79E34600A6E07C /* PushNotif.swift in Sources */,
 				03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */,

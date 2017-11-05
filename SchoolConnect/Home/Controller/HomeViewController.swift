@@ -74,6 +74,19 @@ class HomeViewController: UIViewController {
         heroDateLable.text = "Today's Date: \(timestamp)"
     }
     
+    func didClickFeature(_ feature: HomeFeature) {
+        switch feature.featureType {
+        case "bullyReporting":
+            let bullyReport = ContactTeacherVC()
+            self.present(bullyReport, animated: true, completion: nil)
+        case "contactTeacher":
+            let contactTeacherVC = ContactTeacherVC()
+            self.present(contactTeacherVC, animated: true, completion: nil)
+        default:
+            print("error")
+        }
+    }
+    
 }
 
 //MARK: Delegates
@@ -95,8 +108,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var selectedFeature: HomeFeature!
         selectedFeature = featureArray[indexPath.row]
-        let id = HomeFeature.didClickFeature(selectedFeature)
-        performSegue(withIdentifier: id, sender: selectedFeature)
+        didClickFeature(selectedFeature)
     }
     //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
