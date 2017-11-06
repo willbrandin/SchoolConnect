@@ -61,7 +61,6 @@ class HomeViewController: UIViewController {
     
     func fetchFeatureData() {
         HomeFeature.downloadFeaturesData { (features) in
-            print("WILL: \(features)")
             self.featureArray = features
             DispatchQueue.main.async {
                 self.featureCollectionView.reloadData()
@@ -77,11 +76,11 @@ class HomeViewController: UIViewController {
     func didClickFeature(_ feature: HomeFeature) {
         switch feature.featureType {
         case "bullyReporting":
-            let bullyReport = ContactTeacherVC()
-            self.present(bullyReport, animated: true, completion: nil)
+            let bullyReport = BullyReportVC()
+            self.show(bullyReport, sender: feature)
         case "contactTeacher":
             let contactTeacherVC = ContactTeacherVC()
-            self.present(contactTeacherVC, animated: true, completion: nil)
+            self.show(contactTeacherVC, sender: feature) 
         default:
             print("error")
         }

@@ -24,7 +24,25 @@ struct GlobalVariables {
 }
 
 //Enums
+enum StaffPosition {
+    case administration
+    case supportStaff
+    case teacher
+    case principal
+    case vicePrincipal
+}
 
+enum SchoolLevel {
+    case elementry
+    case middleSchool
+    case highSchool
+}
+
+enum Campus: String {
+    case lancaster = "Life School Lancaster"
+    case waxahachieHigh = "Life High School Waxahachie"
+    case waxahachieMiddle = "Life Middle School Waxahachie"
+}
 
 //Extensions
 class NotifRoundedImage: UIImageView {
