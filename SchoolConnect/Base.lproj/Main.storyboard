@@ -283,6 +283,7 @@
                         <outlet property="featureCollectionView" destination="GRa-cH-Aa6" id="nuN-yM-rMG"/>
                         <outlet property="heroDateLable" destination="rn5-Hz-iab" id="E4t-gu-VT7"/>
                         <outlet property="linksTableView" destination="57l-IO-2wr" id="4kb-Qz-dUI"/>
+                        <segue destination="JfM-JG-t1b" kind="show" identifier="ShowTeacherContact" id="bPy-5d-sxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWR-87-A13" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -721,6 +722,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bus-6P-9Y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1215" y="107"/>
+        </scene>
+        <!--TeacherContactForm-->
+        <scene sceneID="cxq-Nx-dgK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TeacherContactForm" id="JfM-JG-t1b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pg-kx-ffm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-1159"/>
         </scene>
     </scenes>
     <resources>

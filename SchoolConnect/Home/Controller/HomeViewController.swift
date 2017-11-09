@@ -79,11 +79,14 @@ class HomeViewController: UIViewController {
             let bullyReport = BullyReportVC()
             self.show(bullyReport, sender: feature)
         case "contactTeacher":
-            let contactTeacherVC = ContactTeacherVC()
-            self.show(contactTeacherVC, sender: feature) 
+            showTeacherContact()
         default:
             print("error")
         }
+    }
+    
+    func showTeacherContact() {
+        performSegue(withIdentifier: "ShowTeacherContact", sender: nil)
     }
     
 }

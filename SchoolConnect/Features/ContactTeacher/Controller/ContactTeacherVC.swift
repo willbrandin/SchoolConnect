@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactTeacherVC: UIViewController {
+class ContactTeacherVC: UITableViewController {
     
     //MARK: Properties
     
@@ -16,13 +16,15 @@ class ContactTeacherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
-        setupView()
     }
     
-    //MARK: Methods
-    func setupView() {
-        self.title = "Reach your Teacher"
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 }
