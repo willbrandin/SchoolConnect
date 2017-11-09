@@ -28,6 +28,7 @@
 		03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A41F702AFB00B8C78E /* NewsView.swift */; };
 		03A2F5A71F702B6200B8C78E /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */; };
 		03B013CD1FB4AA9700304B2E /* TeacherContactForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B013CC1FB4AA9700304B2E /* TeacherContactForm.storyboard */; };
+		03B013CF1FB4ABA400304B2E /* TeacherContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B013CE1FB4ABA400304B2E /* TeacherContactCell.swift */; };
 		03C2CF411F79E34600A6E07C /* PushNotif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF401F79E34600A6E07C /* PushNotif.swift */; };
 		03C2CF431F79E40600A6E07C /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF421F79E40600A6E07C /* NotificationTableViewController.swift */; };
 		03C2CF451F79E48700A6E07C /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */; };
@@ -72,7 +73,8 @@
 		03A2F5A21F7029C400B8C78E /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		03A2F5A41F702AFB00B8C78E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		03A2F5A61F702B6200B8C78E /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
-		03B013CC1FB4AA9700304B2E /* TeacherContactForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TeacherContactForm.storyboard; path = SchoolConnect/Features/ContactTeacher/View/TeacherContactForm.storyboard; sourceTree = "<group>"; };
+		03B013CC1FB4AA9700304B2E /* TeacherContactForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherContactForm.storyboard; sourceTree = "<group>"; };
+		03B013CE1FB4ABA400304B2E /* TeacherContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherContactCell.swift; sourceTree = "<group>"; };
 		03C2CF401F79E34600A6E07C /* PushNotif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotif.swift; sourceTree = "<group>"; };
 		03C2CF421F79E40600A6E07C /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		03C2CF441F79E48700A6E07C /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,7 +118,6 @@
 		030964B81F701EC800109AF0 = {
 			isa = PBXGroup;
 			children = (
-				03B013CC1FB4AA9700304B2E /* TeacherContactForm.storyboard */,
 				030964C31F701EC800109AF0 /* SchoolConnect */,
 				03E37E031FA566E100915E10 /* SchoolConnectTests */,
 				030964C21F701EC800109AF0 /* Products */,
@@ -237,6 +238,7 @@
 		0328AF111FAF99E200616FB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03B013CC1FB4AA9700304B2E /* TeacherContactForm.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				0328AF1D1FAFA18300616FB0 /* ContactTeacherVC.swift */,
+				03B013CE1FB4ABA400304B2E /* TeacherContactCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				03F2C6DC1F8BD397007F295E /* FeatureHome_CollectionViewCell.swift in Sources */,
 				037BD8D31F7094AC00B4E8DD /* CalendarView.swift in Sources */,
 				03A2F5A51F702AFB00B8C78E /* NewsView.swift in Sources */,
+				03B013CF1FB4ABA400304B2E /* TeacherContactCell.swift in Sources */,
 				03A2F5A31F7029C400B8C78E /* NewsArticle.swift in Sources */,
 				0328AF1E1FAFA18300616FB0 /* ContactTeacherVC.swift in Sources */,
 				030964C51F701EC800109AF0 /* AppDelegate.swift in Sources */,

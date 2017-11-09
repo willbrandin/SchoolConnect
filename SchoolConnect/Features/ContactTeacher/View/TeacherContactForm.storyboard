@@ -5,24 +5,41 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Reach Your Teacher-->
         <scene sceneID="kiM-wO-a5E">
             <objects>
-                <tableViewController id="qcb-oY-WpM" sceneMemberID="viewController">
+                <tableViewController title="Reach Your Teacher" id="qcb-oY-WpM" customClass="ContactTeacherVC" customModule="SchoolConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GPP-Ff-05D">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.68235294120000001" green="0.52941176469999995" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kWY-vQ-cD1">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeacherContact" rowHeight="800" id="kWY-vQ-cD1" customClass="TeacherContactCell" customModule="SchoolConnect" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="800"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kWY-vQ-cD1" id="ajH-1k-jyd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="799.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxJ-Ge-3cd">
+                                            <rect key="frame" x="164" y="385" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7ds-gC-OZ8"/>
+                                                <constraint firstAttribute="width" constant="46" id="ugx-37-kz8"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WxJ-Ge-3cd" secondAttribute="bottom" constant="376.5" id="LfU-Nx-Cn7"/>
+                                        <constraint firstItem="WxJ-Ge-3cd" firstAttribute="top" secondItem="ajH-1k-jyd" secondAttribute="topMargin" constant="377" id="hRp-mk-MW8"/>
+                                        <constraint firstItem="WxJ-Ge-3cd" firstAttribute="centerX" secondItem="ajH-1k-jyd" secondAttribute="centerX" id="oHx-P5-NrI"/>
+                                        <constraint firstItem="WxJ-Ge-3cd" firstAttribute="centerY" secondItem="ajH-1k-jyd" secondAttribute="centerY" id="vaQ-Sn-L47"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -31,10 +48,11 @@
                             <outlet property="delegate" destination="qcb-oY-WpM" id="bGc-pN-jWi"/>
                         </connections>
                     </tableView>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dal-AQ-xpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="-1159"/>
+            <point key="canvasLocation" x="-790" y="-1360"/>
         </scene>
     </scenes>
 </document>
