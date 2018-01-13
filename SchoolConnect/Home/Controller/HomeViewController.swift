@@ -6,14 +6,6 @@
 //  Copyright © 2017 William S. Brandin. All rights reserved.
 //
 
-/*
-- Home View Controller
- Home Screen of the application
- Contains a "Hero-Image" and Label
- Below, a collection view, contains the features such as bully reporting, etc.
- Last, a table view, with Links to the school's website
- */
-
 
 import UIKit
 

@@ -24,7 +24,7 @@ struct GlobalVariables {
 }
 
 //Enums
-enum StaffPosition {
+enum StaffPosition: String {
     case administration
     case supportStaff
     case teacher
@@ -32,7 +32,7 @@ enum StaffPosition {
     case vicePrincipal
 }
 
-enum SchoolLevel {
+enum SchoolLevel: String {
     case elementry
     case middleSchool
     case highSchool
