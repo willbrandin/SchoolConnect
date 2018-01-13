@@ -75,13 +75,11 @@ class HomeViewController: UIViewController {
     
     func didClickFeature(_ feature: HomeFeature) {
         switch feature.featureType {
-        case "bullyReporting":
+        case .bullyReporting:
             let bullyReport = BullyReportVC()
             self.show(bullyReport, sender: feature)
-        case "contactTeacher":
+        case .teacherContact:
             showTeacherContact()
-        default:
-            print("error")
         }
     }
     

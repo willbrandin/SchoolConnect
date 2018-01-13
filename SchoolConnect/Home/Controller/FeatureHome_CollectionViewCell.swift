@@ -18,11 +18,16 @@ class FeatureHomeCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(feature: HomeFeature) {
-        featureIcon.image = feature.icon
-        featureTitle.text = feature.title
-        featureDescription.text = feature.description
+        
+        featureDescription.text = feature.description.uppercased()
+        switch feature.featureType {
+        case .bullyReporting: featureTitle.text = "Bully Reporting"
+            featureIcon.image = UIImage(named: "ls-default news")
+        case .teacherContact: featureTitle.text = "Teacher Contact"
+            featureIcon.image = UIImage(named: "ls-default news")
+        }
     }
-    
+   
     func updateCorner(){
         featureIcon.layer.cornerRadius = 8.0
         featureIcon.layer.masksToBounds = true

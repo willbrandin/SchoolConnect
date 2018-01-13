@@ -10,14 +10,18 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
+enum FeatureType: String {
+    case bullyReporting = "bullyReporting"
+    case teacherContact = "contactTeacher"
+}
+
 struct HomeFeature {
     
     //MARK: Properties
     var title: String
-    var featureType: String
+    var featureType: FeatureType
     var description: String
-    var icon: UIImage
-    var isChosen: Bool
+    var isSelected: Bool
     
     //MARK: Methods
     static func downloadFeaturesData(completion: @escaping ([HomeFeature]) -> Void){
@@ -31,27 +35,26 @@ struct HomeFeature {
                 guard let type = dictionary["type"] as? String else { return }
                 guard let description = dictionary["description"] as? String else { return }
                 guard let isSelected = dictionary["isSelected"] as? Bool else { return }
-                let newFeature = HomeFeature(title: title, featureType: type, description: description, icon: #imageLiteral(resourceName: "ls-default news"), isChosen: isSelected)
+                guard let featureType = FeatureType(rawValue: type) else { return }
+                let newFeature = HomeFeature(title: title, featureType: featureType, description: description, isChosen: isSelected)
                 features.append(newFeature)
                 completion(removeNonSelectedFeatures(from: features))
             }
         }
     }
     
-  
     
     static func removeNonSelectedFeatures(from features: [HomeFeature]) -> [HomeFeature] {
-        let trueValues = features.filter({$0.isChosen == true})
+        let trueValues = features.filter({$0.isSelected == true})
         return trueValues
     }
     
     //MARK: Inits
-    init(title: String, featureType: String, description: String, icon: UIImage, isChosen: Bool) {
+    init(title: String, featureType: FeatureType, description: String, isChosen: Bool) {
         self.title = title
         self.featureType = featureType
         self.description = description
-        self.icon = icon
-        self.isChosen = isChosen
+        self.isSelected = isChosen
     }
 }
 
