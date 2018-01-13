@@ -17,7 +17,7 @@ class LinkHomeTableViewCell: UITableViewCell {
     }
 
     func configureCell(link: HomeLink) {
-        linkTitle.text = link.title
+        linkTitle.text = link.title.uppercased()
     }
 
 }

@@ -122,5 +122,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openInBrowser(linksArray[indexPath.row])
+    }
+    
+    func openInBrowser(_ link: HomeLink){
+        if let url = URL(string: link.linkURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
     
 }
