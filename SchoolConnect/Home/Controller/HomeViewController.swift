@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         fetchFeatureData()
         heroDisplayDate()
     }
+    
 
     //MARK: Methods
     func fetchLinkData() {
@@ -110,7 +111,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return linksArray.count
     }
@@ -124,13 +127,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         openInBrowser(linksArray[indexPath.row])
+        self.linksTableView.deselectRow(at: indexPath, animated: true)
     }
     
     func openInBrowser(_ link: HomeLink){
         if let url = URL(string: link.linkURL) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        
     }
     
 }

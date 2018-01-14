@@ -21,6 +21,7 @@ struct GlobalVariables {
     static let NOTIFICATIONS = "Notifications"
     static let DEFAULT_IMG_URL = "gs://schoolconnect-willbrandin.appspot.com/SchoolOfLifeAssets/NewsPictures/ShowImage.jpeg"
     static let FEATURES = "Features"
+    static let LINKS = "Links"
 }
 
 //Enums
