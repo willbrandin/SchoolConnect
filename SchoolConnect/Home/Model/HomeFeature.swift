@@ -28,7 +28,7 @@ struct HomeFeature {
         var features = [HomeFeature]()
         
         let ref = Database.database().reference()
-        let featureRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.FEATURES)
+        let featureRef = ref.child(NetworkVariables.SCHOOL_NAME).child(NetworkVariables.FEATURES)
         featureRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }

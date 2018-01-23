@@ -19,7 +19,7 @@ struct HomeLink {
     static func downloadLinksData(completion: @escaping ([HomeLink]) -> Void) {
         var links = [HomeLink]()
         let ref = Database.database().reference()
-        let featureRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.LINKS)
+        let featureRef = ref.child(NetworkVariables.SCHOOL_NAME).child(NetworkVariables.LINKS)
         featureRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }

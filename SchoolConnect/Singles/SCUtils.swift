@@ -14,7 +14,7 @@ import UIKit
 //Global Constants
 ///Used for Database Reference's/Child Names for Firebase
 
-struct GlobalVariables {
+struct NetworkVariables {
     static let SCHOOL_NAME = "SchoolOfLife"
     static let CALENDAR_EVENT = "CalendarEvents"
     static let NEWS_ARTICLE = "News"
@@ -81,8 +81,6 @@ extension Date {
         return stringFromDate
     }
 }
-
-
 
 
 

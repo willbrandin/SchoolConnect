@@ -24,7 +24,7 @@ struct NewsArticle {
     static func downloadNewsData(completion: @escaping ([NewsArticle]) -> Void) {
         var newsItems = [NewsArticle]()
         let ref = Database.database().reference()
-        let newsRef = ref.child(GlobalVariables.SCHOOL_NAME).child(GlobalVariables.NEWS_ARTICLE)
+        let newsRef = ref.child(NetworkVariables.SCHOOL_NAME).child(NetworkVariables.NEWS_ARTICLE)
         newsRef.observe(.childAdded) { (snapshot) in
             if let dictionary = snapshot.value as? [String : AnyObject] {
                 guard let title = dictionary["title"] as? String else { return }
@@ -41,7 +41,7 @@ struct NewsArticle {
                     newsItems.append(newArticle)
                     completion(newsItems)
                 } else {
-                    let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: pubDate, source: source, imgUrl: GlobalVariables.DEFAULT_IMG_URL, story: story)
+                    let newArticle = NewsArticle(title: title, subtitle: subtitle, pubDate: pubDate, source: source, imgUrl: NetworkVariables.DEFAULT_IMG_URL, story: story)
                     newsItems.append(newArticle)
                     completion(newsItems)
                 }

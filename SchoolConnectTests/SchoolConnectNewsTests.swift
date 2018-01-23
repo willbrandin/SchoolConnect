@@ -47,7 +47,7 @@ class SchoolConnectNewsTests: XCTestCase {
     
     func testDefaultImgURL() {
         let testArticleUrl = self.newsArray![2].imgUrl
-        let testURL = GlobalVariables.DEFAULT_IMG_URL
+        let testURL = NetworkVariables.DEFAULT_IMG_URL
         
         XCTAssertEqual(testURL, testArticleUrl)
     }

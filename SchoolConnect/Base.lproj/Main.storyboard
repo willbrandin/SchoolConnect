@@ -359,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-oc-cj9">
-                                <rect key="frame" x="36" y="136" width="319" height="452"/>
+                                <rect key="frame" x="0.0" y="136" width="0.0" height="452"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Hello" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-Wc-T9e">
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="237"/>
@@ -368,7 +368,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ls-default news" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-z5-rZP" customClass="NotifRoundedImage" customModule="SchoolConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="237" width="319" height="215"/>
+                                        <rect key="frame" x="0.0" y="237" width="0.0" height="215"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
